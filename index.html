@@ -512,7 +512,7 @@ function zipBlob(files){
 }
 /* ====== WordprocessingML ====== */
 const P=(txt,o={})=>{
- const {b,i,sz=22,jc,ind,after=120,line}=o;
+ const {b,i,sz=22,jc,ind,after=100,line}=o;
  const rpr=`<w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>${b?"<w:b/>":""}${i?"<w:i/>":""}<w:sz w:val="${sz}"/></w:rPr>`;
  const ppr=`<w:pPr>${jc?`<w:jc w:val="${jc}"/>`:""}${ind?`<w:ind w:firstLine="${ind}"/>`:""}<w:spacing w:after="${after}"${line?` w:line="${line}" w:lineRule="auto"`:""}/></w:pPr>`;
  return `<w:p>${ppr}<w:r>${rpr}<w:t xml:space="preserve">${esc(txt)}</w:t></w:r></w:p>`;
@@ -528,7 +528,7 @@ function buildDoc(numOficio){
  let corpo="";
  corpo+=P("MINISTÉRIO DA EDUCAÇÃO",{b:1,jc:"center",sz:20,after:0});
  corpo+=P("UNIVERSIDADE FEDERAL DA PARAÍBA",{b:1,jc:"center",sz:20,after:0});
- corpo+=P("GABINETE DA REITORA",{b:1,jc:"center",sz:20,after:200});
+ corpo+=P("GABINETE DA REITORA",{b:1,jc:"center",sz:20,after:160});
  corpo+=P(`OFÍCIO Nº ${numOficio}/2026/GR/R/UFPB`,{b:1,after:160});
  corpo+=P(`João Pessoa, ${D.dataExt}.`,{jc:"right",after:240});
  corpo+=P("Ao Senhor",{after:0});
@@ -539,14 +539,15 @@ function buildDoc(numOficio){
  corpo+=P("Assunto: Solicitação de liberação de recursos financeiros para pagamento de despesas de obras já liquidadas — UO 26240.",{b:1,jc:"both",after:160});
  corpo+=P("Senhor Subsecretário,",{after:160});
  const T=fmtBR(D.total), E=extenso(D.total);
- corpo+=P(`1. Cumprimentando-o cordialmente, dirijo-me a Vossa Senhoria para solicitar a liberação de recursos financeiros destinados ao pagamento de despesas de obras já liquidadas e pendentes de pagamento no âmbito desta Universidade, no montante de R$ ${T} (${E}), conforme posição de ${hoje}, extraída do SIAFI/Tesouro Gerencial na conta contábil 449051 — Obras e Instalações, detalhada no Anexo I deste expediente.`,{jc:"both",ind:709,line:300});
- corpo+=P("2. As despesas referem-se a serviços de engenharia efetivamente executados, medidos e atestados pela Superintendência de Infraestrutura (SINFRA) desta Instituição, com liquidação regularmente registrada no SIAFI, restando pendente exclusivamente o estágio de pagamento, na forma do art. 62 da Lei nº 4.320/1964.",{jc:"both",ind:709,line:300});
+ corpo+=P(`1. Cumprimentando-o cordialmente, dirijo-me a Vossa Senhoria para solicitar a liberação de recursos financeiros destinados ao pagamento de despesas de obras já liquidadas e pendentes de pagamento no âmbito desta Universidade, no montante de R$ ${T} (${E}), conforme posição de ${hoje}, extraída do SIAFI/Tesouro Gerencial na conta contábil 449051 — Obras e Instalações, detalhada no Anexo I deste expediente.`,{jc:"both",ind:709,line:264});
+ corpo+=P("2. As despesas referem-se a serviços de engenharia efetivamente executados, medidos e atestados pela Superintendência de Infraestrutura (SINFRA) desta Instituição, com liquidação regularmente registrada no SIAFI, restando pendente exclusivamente o estágio de pagamento, na forma do art. 62 da Lei nº 4.320/1964.",{jc:"both",ind:709,line:264});
  const g7=D.grupos.find(g=>g.rp==="7"), pct=(g7.sub/D.total*100).toFixed(1).replace(".",",");
- corpo+=P(`3. Do montante indicado, R$ ${fmtBR(g7.sub)} (${pct}%) correspondem a despesas custeadas por emendas de bancada (RP 7), destacando-se a Nota de Empenho nº 153066152312025NE000475, no valor de R$ 708.776,31, integralmente liquidada e sem qualquer pagamento desde dezembro de 2025.`,{jc:"both",ind:709,line:300});
- corpo+=P("4. Cabe registrar que a ausência de liberação financeira tem produzido efeitos diretos sobre a execução contratual, com risco de suspensão dos serviços, desmobilização das empresas contratadas, paralisação das obras e consequente elevação dos custos, conforme diagnóstico consolidado no Plano de Ação para Mitigação dos Riscos Relacionados à Execução de Obras da UFPB (2026), aprovado por esta Reitoria.",{jc:"both",ind:709,line:300});
- corpo+=P("5. Diante do exposto, e considerando o disposto no art. 166, §§ 12 e 13, da Constituição Federal, que impõe a execução obrigatória das programações decorrentes de emendas de bancada, solicita-se a adoção das providências necessárias à liberação do limite financeiro correspondente.",{jc:"both",ind:709,line:300});
- corpo+=P("6. Colocamo-nos à disposição para prestar os esclarecimentos adicionais que se façam necessários.",{jc:"both",ind:709,line:300,after:260});
- corpo+=P("Atenciosamente,",{after:420});
+ corpo+=P(`3. Do montante indicado, R$ ${fmtBR(g7.sub)} (${pct}%) correspondem a despesas custeadas por emendas de bancada (RP 7), destacando-se a Nota de Empenho nº 153066152312025NE000475, no valor de R$ 708.776,31, integralmente liquidada e sem qualquer pagamento desde dezembro de 2025.`,{jc:"both",ind:709,line:264});
+ corpo+=P("4. Destaca-se que as despesas se referem a obras inacabadas, monitoradas pelo Ministério Público e pela Controladoria-Geral da União – CGU, e que a ausência do repasse financeiro acarretará risco de nova paralisação, com possíveis impactos no desenvolvimento das atividades acadêmicas e administrativas da Universidade.",{jc:"both",ind:709,line:264});
+ corpo+=P("5. Cabe registrar que a indisponibilidade dos recursos financeiros tem produzido efeitos diretos sobre a execução contratual, com risco de suspensão dos serviços, desmobilização das empresas contratadas, paralisação das obras e consequente elevação dos custos, conforme diagnóstico consolidado no Plano de Ação para Mitigação dos Riscos Relacionados à Execução de Obras da UFPB (2026), aprovado por esta Reitoria.",{jc:"both",ind:709,line:264});
+ corpo+=P("6. Diante do exposto, e considerando o disposto no art. 166, §§ 12 e 13, da Constituição Federal, que impõe a execução obrigatória das programações decorrentes de emendas de bancada, solicita-se a adoção das providências necessárias à liberação do limite financeiro correspondente.",{jc:"both",ind:709,line:264});
+ corpo+=P("7. Colocamo-nos à disposição para prestar os esclarecimentos adicionais que se façam necessários.",{jc:"both",ind:709,line:264,after:220});
+ corpo+=P("Atenciosamente,",{after:340});
  corpo+=P("TEREZINHA DOMICIANO DANTAS MARTINS",{b:1,jc:"center",after:0});
  corpo+=P("Reitora da Universidade Federal da Paraíba",{jc:"center",after:0});
  /* ---- ANEXO ---- */
