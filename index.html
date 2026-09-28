@@ -94,6 +94,8 @@
   .mchip.prev{border-left-style:dashed; border-left-color:var(--ufpb); background:#fffdf7;}
   .mchip.est{border-left-style:dashed; border-left-color:#9aa8b8; background:#fafbfc;}
   .mchip.fut{border-left-color:#9aa8b8; background:#f4f7fa;}
+  .btn-doc{background:#b3261e;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-size:.9rem;font-weight:700;cursor:pointer;box-shadow:0 2px 6px rgba(179,38,30,.3);}
+  .btn-doc:hover{background:#8f1e18;}
   .flash{animation:flash 1.4s ease 2;}
   @keyframes flash{0%,100%{box-shadow:0 0 0 0 transparent;}35%{box-shadow:0 0 0 4px rgba(30,90,168,.55);}}
   .listtitle{font-size:1.02rem; font-weight:750; color:var(--navy); margin:8px 0 2px; border-top:1px solid var(--line); padding-top:14px;}
@@ -133,7 +135,7 @@
 <header>
   <h1>Obras UFPB — 2025/2026, obra a obra</h1>
   <p class="sub">Cada obra em uma linha; cada mês em uma coluna; <b>cada grupo em uma tela própria</b>: <b>PAC (RP 3)</b> · <b>Recurso MEC (UO 26101)</b> · <b>Obras UFPB (UO 26240)</b> · <b>Obras convênio (Ginásio e Sivuca — fonte 1081)</b> · <b>Panorama</b>. Selecione a tela ou a obra: sobe a ficha com dados do contrato, previsão de apostilamento/aditivo 2026, o que foi empenhado e as diferenças.</p>
-  <p class="meta">CODEOR/PROPLAN · UO 26240/26101 · UG 153066 · Posição: 11/08/2026 (liquidados a pagar: 25/08/2026) · Fontes: Tesouro Gerencial/SIAFI (41 NEs; 84 movimentações), resumo obras 2026, Ofício 280/2026/GR (PAC), SIOP/SIMEC/SISGRU, convênios SEPLAG-PB</p>
+  <p class="meta">CODEOR/PROPLAN · UO 26240/26101 · UG 153066 · Posição: 11/08/2026 (liquidados a pagar: 28/09/2026) · Fontes: Tesouro Gerencial/SIAFI (41 NEs; 84 movimentações), resumo obras 2026, Ofício 280/2026/GR (PAC), SIOP/SIMEC/SISGRU, convênios SEPLAG-PB</p>
 </header>
 <div class="wrap">
 
@@ -144,7 +146,7 @@
     <div class="kpi green"><b>R$ 28.593.753,70</b><span>empenhado nas 16 obras do estudo (37 NEs, 17 PIs): 2023 R$ 4,45 mi (RAP) · 2025 R$ 18,49 mi · 2026 R$ 5,65 mi</span></div>
     <div class="kpi red"><b>R$ 20.400.000</b><span>emenda de bancada 2026 (RP 7, 15R3) 100% bloqueada — nenhuma NE de RP 7 emitida em 2026</span></div>
     <div class="kpi red"><b>2 divergências críticas</b><span>favorecidos trocados (PK1×PC7) e contrato CCHLA divergente em R$ 254.270,95 (resumo × ofício PAC)</span></div>
-    <div class="kpi red"><b>R$ 1.231.433,10</b><span>liquidados a pagar em 25/08/2026 (conta 449051) — 76,4% em RP 7; NE 000475 (R$ 708,8 mil) travada desde dez/2025</span></div>
+    <div class="kpi red"><b>R$ 1.807.846,83</b><span>liquidados a pagar em 28/09/2026 (conta 449051) — recorde do exercício; 82,8% em RP 7; NE 000475 travada há 9 meses</span></div>
   </div>
 
   <div class="filters">
@@ -156,7 +158,7 @@
       <button class="chip gchip" id="g-ufpb" data-g="ufpb">Obras UFPB (26240)</button>
       <button class="chip gchip" id="g-conv" data-g="conv">Obras convênio</button>
       <button class="chip gchip" id="g-ctx" data-g="ctx">Panorama</button>
-      <button class="chip gchip" id="g-liq" data-g="liq">Liquidados a pagar (25/08)</button>
+      <button class="chip gchip" id="g-liq" data-g="liq">Liquidados a pagar (28/09)</button>
       <span class="lbl" style="margin-left:8px">OBRA:</span>
       <select id="selobra"><option value="">— todas do grupo —</option></select>
     </div>
@@ -188,7 +190,7 @@
 
   <p class="mini" style="margin-top:18px">Documentos-fonte: Relatório em OBRAS 2024-2026 por empenho e Relatório estudo obras 2024-2026 (Tesouro Gerencial); resumo obras 2026 com emenda de bancada; empenhos Sivuca (painel SIAFI); Ofício 280/2026/GR; espelhos SIOP/SIMEC/SISGRU e convênios SEPLAG-PB detalhados nas fichas. Estágio medido: <b>empenho</b> (liquidação/pagamento apenas onde indicado — Sivuca NE 000275).</p>
 
-  <footer>CODEOR/PROPLAN/UFPB · UO 26240/26101 · UG 153066 · Posição documental: 11/08/2026 · Valores em R$ correntes · Estágio da despesa: empenho (Movim. Líquido). Uso interno de gestão orçamentária.</footer>
+  <footer>CODEOR/PROPLAN/UFPB · UO 26240/26101 · UG 153066 · Posição documental: 11/08/2026 · Valores em R$ correntes · Estágio da despesa: empenho (Movim. Líquido). Uso interno de gestão orçamentária.<br>Versão pública: <a href="https://fernandoabcj.github.io/obras12082026/" style="color:#1e5aa8">fernandoabcj.github.io/obras12082026</a></footer>
 </div>
 <script>
 /* ================= DADOS POR OBRA ================= */
@@ -208,10 +210,10 @@ ctx_receita:{g:"ctx",nome:"PANORAMA · Receita convênios (fonte 1081) e SIOP",s
  c:[["Pendências","Sivuca: R$ 600 mil vencidos (mar/jun 26); vigência expira 23/12/2026 (prorrogação ex officio cabível) · Ginásio: R$ 1,6 mi vence out/26 · estimar 2027 no PLOA"]],obs:null}},
 pac_cchla:{g:"pac",nome:"Bloco de Pós-Graduação do CCHLA",sub:"VSS25G41MH9 · ABART",pi:"VSS25G41MH9",uo:"26101 (RP3) + 26240 (RP2 residual)",emp:"ABART ENGENHARIA (38.198.860/0001-54)",contrato:4463269.84,prev:4775698.73,prevN:"fórmula =contrato×1,07",adit:1052249.72,e24:0,e25:2526274.25,e26:42.09,
  rp:"RP 3: 2.526.274,25 · RP 2: 42,09",nes:"NE 2025: 000149 (1,8 mi), 000250 (726,3 mil) · NE 2026: 000215 (42,09)",proc:"23074.071768/2025-88 · 23074.030938/2023-02 · CIPI 51712.25-00",
- flags:["Contrato divergente: resumo R$ 4.463.269,84 × ofício PAC R$ 4.208.998,89 (dif. R$ 254.270,95)","Aditivo PAC 2026 pleiteado — Ofício 280/2026/GR, sem resposta","Liquidado a pagar em 25/08/2026: R$ 12.619,26 (NE 000250) — caiu de R$ 78.030,34 em 24/08 (pagamento no TED-MEC)"]},
+ flags:["Contrato divergente: resumo R$ 4.463.269,84 × ofício PAC R$ 4.208.998,89 (dif. R$ 254.270,95)","Aditivo PAC 2026 pleiteado — Ofício 280/2026/GR, sem resposta","Estoque liquidado a pagar ZERADO em setembro (NE 000250 integralmente quitada) — fluxo do TED-MEC normal"]},
 pac_cbiotec:{g:"pac",nome:"Bloco de Biotecnologia (CBIOTEC)",sub:"VSS25G41MI0 · C B A Construções",pi:"VSS25G41MI0",uo:"26101 (RP3) + 26240 (RP2 residual)",emp:"C B A CONSTRUCOES (09.605.291/0001-16)",contrato:5190000.00,prev:5538122.44,prevN:"valor digitado (6,71%) — a 7% seria 5.553.300,00 (−15.177,56)",adit:1297500.00,e24:0,e25:1574000.00,e26:55.38,
  rp:"RP 3: 1.574.000,00 · RP 2: 55,38",nes:"NE 2025: 000148 (500 mil), 000171 (450 mil), 000251 (624 mil) · NE 2026: 000216",proc:"23074.039824/2025-52 · 071777/2025-39 · 051850/2024-12 · CIPI 51709.25-18",
- flags:["Previsão 2026 subestimada em R$ 15.177,56 (valor fixo digitado)","Aditivo PAC 2026 pleiteado — Ofício 280/2026/GR","Liquidado a pagar em 25/08/2026: R$ 6.598,17 (NE 000171) — quase zerado após pagamentos (era R$ 112.789,22 em 14/08)"]},
+ flags:["Previsão 2026 subestimada em R$ 15.177,56 (valor fixo digitado)","Aditivo PAC 2026 pleiteado — Ofício 280/2026/GR","Liquidado a pagar em 28/09/2026: R$ 8.414,73 (NE 000171) — NE 000251 quitada; fluxo do PAC normalizado"]},
 pac_hosp:{g:"pac",nome:"Unidade de Hospitalidade (Campus I)",sub:"VSS25G41MI9 · Consterra",pi:"VSS25G41MI9",uo:"26101 (RP3) + 26240 (RP2 residual)",emp:"CONSTERRA (07.353.156/0001-03)",contrato:3212184.53,prev:3437037.45,prevN:"fórmula =contrato×1,07",adit:803046.13,e24:0,e25:1737992.44,e26:30.81,
  rp:"RP 3: 1.737.992,44 · RP 2: 30,81",nes:"NE 2025: 000150 (800 mil), 000249 (938,0 mil) · NE 2026: 000217",proc:"23074.071788/2025-33 · 014406/2019-20 (proc. PAC) · CIPI 52116.25-66",
  flags:["Aditivo PAC 2026 pleiteado — Ofício 280/2026/GR"]},
@@ -228,30 +230,30 @@ u_cpt:{g:"ufpb",nome:"Centro Profissional e Tecnológico",sub:"LSS25G41KI1 · AB
 u_prot:{g:"ufpb",nome:"Laboratório de Prototipagem — CEAR",sub:"VSS25G41HG3 · UN Engenharia",pi:"VSS25G41HG3",uo:"26240",emp:"UN ENGENHARIA (48.393.324/0001-63)",contrato:300265.89,prev:321284.50,prevN:"fórmula =contrato×1,07",adit:null,e24:0,e25:300265.89,e26:0,
  rp:"RP 6: 273.096,52 · RP 7: 27.169,37",nes:"NE 2025: 000309, 000455 · 2026: 000210 estornada",proc:"23074.054114/2020-06 · CIPI 29193.25-09",flags:["Contrato 100% empenhado — resta só o reajuste previsto (R$ 21.018,61)"]},
 u_blocod:{g:"ufpb",nome:"Bloco \"D\" do Centro de Educação (Pós-Graduação do CE)",sub:"VSS25G41JG7 · RN Construções · Contrato 13/2023 (RDC 003/2023)",pi:"VSS25G41JG7",uo:"26240",emp:"RN CONSTRUCOES (10.554.443/0001-88)",contrato:2991867.26,prev:3120190.18,prevN:"valor digitado (4,29%) — a 7% seria 3.201.297,97 (−81.107,79)",adit:null,e23:2257546.62,e24:0,e25:734320.64,e26:0,
- rp:"NE 2023 (RP 7, 27/12/2023): 2.257.546,62 — RAP: pagos acum. 1.598.530,03 · saldo 659.016,59 (liquidado a pagar em 25/08/26: 11.797,01 — caiu de 337.057,47 em julho, com pagamentos ao longo de agosto) · RP 2 (2025): 96.203,00 — RAP: pagos 71.383,13, saldo 24.819,87 · RP 7 (2025): 638.117,64 — integralmente em RAP, sem liquidação",
+ rp:"NE 2023 (RP 7, 27/12/2023): 2.257.546,62 — RAP: pagos acum. 1.598.530,03 · saldo 659.016,59 (liquidado a pagar em 28/09/26: 321.959,12 — voltou a subir +302,2 mil em setembro; some-se a NE 000351 com 19.960,57 e a NE 000222 com 24.819,87) · RP 2 (2025): 96.203,00 — RAP: pagos 71.383,13, saldo 24.819,87 · RP 7 (2025): 638.117,64 — integralmente em RAP, sem liquidação",
  nes:"NE 2023: 000381 (2.257.546,62 — NC000645, Despacho 1752/2023-SOF) · NE 2025: 000222 (96.203,00 — Despacho 1182/2025) e 000351 (638.117,64 — NC 2025NC000566, Despacho 1748/2025; incl. 25/09 + reforços 15/12) · NE 2026: 000213 estornada",
  proc:"Contrato 13/2023 · RDC 003/2023 · 23074.060721/2025-82 · 001913/2022-17 · 092105/2025-09 · CIPI 31425.25-22",
  flags:["CONTRATO 100% EMPENHADO: NEs 2023+2025 fecham exatamente os R$ 2.991.867,26 — resta apenas o apostilamento (Δ previsão: R$ 128.322,92)","Execução concentrada em RAP: saldo de 659.016,59 (NE 2023) + 638.117,64 (NE 000351, nada liquidado) + 24.819,87 (NE 000222)","Previsão 2026 subestimada em R$ 81.107,79 (valor fixo digitado)"]},
 u_carc:{g:"ufpb",nome:"Laboratório de Tipificação de Carcaças",sub:"VSS25G41OT8 · EXA Engenharia",pi:"VSS25G41OT8",uo:"26240",emp:"EXA ENGENHARIA (07.870.719/0001-22)",contrato:499000.00,prev:533930.00,prevN:"fórmula =contrato×1,07",adit:null,e24:0,e25:499000.00,e26:0,
- rp:"RP 7: 499.000,00",nes:"NE 2025: 000468 (23/12) · 2026: 000211 estornada",proc:"23074.071837/2025-68 · CIPI 64501.25-78",flags:["Contrato 100% empenhado — resta o reajuste (R$ 34.930,00)","ALERTA DE PAGAMENTO: R$ 95.500,48 liquidados a pagar (NE 000468) sem nenhum pagamento desde a entrada no estoque, em agosto"]},
+ rp:"RP 7: 499.000,00",nes:"NE 2025: 000468 (23/12) · 2026: 000211 estornada",proc:"23074.071837/2025-68 · CIPI 64501.25-78",flags:["Contrato 100% empenhado — resta o reajuste (R$ 34.930,00)","ALERTA DE PAGAMENTO: estoque liquidado a pagar MAIS QUE DOBROU em setembro — R$ 223.907,08 (NE 000468), sem nenhum pagamento desde a entrada, em agosto"]},
 u_rotas:{g:"ufpb",nome:"Rotas Acessíveis",sub:"VSS25G41OT9 · Constral",pi:"VSS25G41OT9",uo:"26240",emp:"CONSTRAL (10.758.902/0001-45)",contrato:5899999.00,prev:6312998.93,prevN:"fórmula =contrato×1,07",adit:null,e24:0,e25:5899999.00,e26:0,
  rp:"RP 7: 5.899.999,00 — maior NE da carteira",nes:"NE 2025: 000371 (09/10) · 2026: 000218 estornada",proc:"23074.062285/2025-49 · minuta 15306603900012025",flags:["Contrato 100% empenhado — resta o reajuste (R$ 412.999,93)","PLANO DE AÇÃO 2026 (risco Moderado): retomada depende da convocação das empresas remanescentes da licitação — risco de recusa (estratégia 6; ação Sinfra/SOF)"]},
 u_ginasio:{g:"conv",nome:"Novo Ginásio Didático (CCS)",sub:"VSS25G41PC2 · Construtora Soberana · convênio SEE-PB",pi:"VSS25G41PC2",uo:"26240",emp:"CONSTRUTORA SOBERANA (33.075.863/0001-87)",contrato:4505899.23,prev:4821312.18,prevN:"fórmula =contrato×1,07",adit:null,e24:0,e25:506548.70,e26:1000045.06,
  rp:"RP 7 (2025): 506.548,70 — recursos da própria UFPB desde a contratação · RP 2/1081 (2026): 1.000.045,06",nes:"NE 2025: 000474 (RP7, s/ data no relatório) · NE 2026: 000261 (R$ 1,0 mi — liberado e empenhado após o ingresso do financeiro de 06/07) e 000220 (45,06)",proc:"23074.088908/2022-07 · 068149/2026-22 · 052633/2026-11 · CIPI 108029.25-05",
  conv:"Convênio SEE-PB (SEP-PRC-2025/00681, assinado 23/03/2026): repasse R$ 4,0 mi + contrapartida R$ 1.366.129,40. Recebido: R$ 1,2 mi (GRU 06/07/26); a receber: R$ 2,8 mi (out/26 e jun/27). Cronograma físico: mar/26–ago/28.",
- flags:["PLANO DE AÇÃO 2026: única obra classificada como risco CRÍTICO — paralisação por pendências financeiras e contratuais; ação: análise administrativa e jurídica das obrigações pendentes, interlocução com a contratada e avaliação de eventual suspensão da execução (Reitoria/Proplan/Sinfra/SOF)","Aguarda 3º atendimento SIOP: R$ 1.800.000 — R$ 200 mil liberáveis de imediato (excesso já arrecadado: 1,2 mi recebidos × 1,0 mi dotados) + R$ 1,6 mi condicionados ao pagamento estadual de out/26","Etapa de estruturas (R$ 1.896.656,20) vence dez/26","Liquidado a pagar em 25/08/2026: R$ 103.646,32 (NE 000474) — caiu de R$ 242.093,50 em julho"]},
+ flags:["PLANO DE AÇÃO 2026: única obra classificada como risco CRÍTICO — paralisação por pendências financeiras e contratuais; ação: análise administrativa e jurídica das obrigações pendentes, interlocução com a contratada e avaliação de eventual suspensão da execução (Reitoria/Proplan/Sinfra/SOF)","Aguarda 3º atendimento SIOP: R$ 1.800.000 — R$ 200 mil liberáveis de imediato (excesso já arrecadado: 1,2 mi recebidos × 1,0 mi dotados) + R$ 1,6 mi condicionados ao pagamento estadual de out/26","Etapa de estruturas (R$ 1.896.656,20) vence dez/26","Liquidado a pagar em 28/09/2026: R$ 107.000,16 — NE 000474 (RP 7): 101.139,31 · NE 000261 (fonte 1081/convênio): 5.860,85"]},
 u_sods:{g:"ufpb",nome:"Reforma SODS, Hall da Reitoria e Protocolo",sub:"VSS25G41PC7 · EDA (NE) / Caramuru (resumo)",pi:"VSS25G41PC7",uo:"26240",emp:"NE 2026: EDA ENGENHARIA (46.266.786/0001-94) · resumo: CARAMURU",contrato:1957686.16,prev:2094724.19,prevN:"fórmula =contrato×1,07 · Contrato Administrativo nº 011/2026",adit:null,e24:0,e25:0,e26:434465.30,
  rp:"RP 2: 434.465,30",nes:"NE 2026: 000142 (26/03: 107,4 mil; 04/08: 327,0 mil)",proc:"23074.107519/2025-58 · CIPI 128461.25-84",
  flags:["DIVERGÊNCIA CRÍTICA: favorecido trocado com PK1 (resumo diz Caramuru; NE é da EDA) — conferir no SIAFI antes de pagamento/prestação de contas"]},
 u_pk1:{g:"ufpb",nome:"Pós-Graduação em Ecologia e Antropologia",sub:"VSS25G41PK1 · Caramuru (NE) / EDA (resumo)",pi:"VSS25G41PK1",uo:"26240",emp:"NE 2026: CARAMURU (19.293.019/0001-00) · resumo: EDA",contrato:2560000.00,prev:2739200.00,prevN:"fórmula =contrato×1,07 · Contrato UFPB/SOF nº 010/2026",adit:null,e24:0,e25:0,e26:293622.09,
  rp:"RP 2: 293.622,09",nes:"NE 2026: 000141 (lançada/estornada 26-27/03) → 000143 (27/03: 96,5 mil; 31/07: 197,1 mil)",proc:"23074.002891/2025-83 · CIPI 128541.25-39",
- flags:["DIVERGÊNCIA CRÍTICA: favorecido trocado com SODS/PC7 — conferir no SIAFI","89% do contrato ainda por empenhar","Liquidado a pagar em 25/08/2026: R$ 30.177,48 (NE 000143) — 1ª medição, sem pagamento desde 14/08"]},
+ flags:["DIVERGÊNCIA CRÍTICA: favorecido trocado com SODS/PC7 — conferir no SIAFI","89% do contrato ainda por empenhar","1ª medição (R$ 30.177,48, NE 000143) integralmente PAGA em setembro — estoque zerado"]},
 u_pav:{g:"ufpb",nome:"Pavimentação dos acessos principais — Campus III",sub:"VSS25G41PG4 · Consterra",pi:"VSS25G41PG4 (objeto 1)",uo:"26240",emp:"CONSTERRA (07.353.156/0001-03)",contrato:3139000.00,prev:3358730.00,prevN:"fórmula =contrato×1,07",adit:null,e24:0,e25:708776.31,e26:2430223.69,
  rp:"RP 7 (2025): 708.776,31 · RP 2 (2026): 2.430.223,69",nes:"NE 2025: 000475 (31/12) · NE 2026: 000221 (Consterra)",proc:"23074.119987/2025-12 · 052633/2026-11 · minuta 15306603000192025 · CIPI 108143.25-02",
- flags:["Contrato 100% empenhado: as NEs Consterra (708.776,31 + 2.430.223,69) fecham exatamente os R$ 3.139.000,00 — resta o apostilamento (R$ 219.730,00)","MAIOR PRESSÃO FINANCEIRA DA CARTEIRA: R$ 784.447,83 liquidados a pagar em 25/08/2026 (NE 000475: 708.776,31 · NE 000221: 75.671,52) — 63,7% do estoque da conta 449051","GARGALO CENTRAL: a NE 000475 (RP 7, empenhada em 31/12/2025) segue com R$ 708.776,31 liquidados e SEM NENHUM PAGAMENTO desde então"]},
+ flags:["Contrato 100% empenhado: as NEs Consterra (708.776,31 + 2.430.223,69) fecham exatamente os R$ 3.139.000,00 — resta o apostilamento (R$ 219.730,00)","GARGALO CENTRAL DA CARTEIRA: a NE 000475 (RP 7, empenhada em 31/12/2025) completa nove meses com R$ 708.776,31 liquidados e SEM NENHUM PAGAMENTO — 39,2% de todo o estoque da conta 449051 em 28/09/2026","A NE 000221 (RP 2, recursos próprios) foi integralmente quitada em setembro — o que a UFPB custeia flui; o que depende de emenda, não"]},
 u_urb:{g:"ufpb",nome:"Urbanização do Auditório do CCHSA e calçadas — Campus III",sub:"VSS25G41PG4 · S&V (NE) / Consterra (resumo)",pi:"VSS25G41PG4 (objeto 2)",uo:"26240",emp:"NE: CONSTRUTORA S & V (07.419.365/0001-02) · resumo: Consterra",contrato:2182186.00,prev:2334939.02,prevN:"fórmula =contrato×1,07",adit:null,e24:0,e25:0,e26:959201.68,
  rp:"RP 2 (2026): 959.201,68",nes:"NE 2026: 000144 (S&V)",proc:"23074.000049/2026-87 · 119987/2025-12 · contrato 15306603000122026 · CIPI 128617.25-00",
- flags:["Empenhos executados pela S&V, empresa que não consta do resumo 2026 (contrato próprio 15306603000122026)","Atribuição por exclusão: as NEs Consterra fecham o contrato da Pavimentação; a NE S&V corresponde a este objeto","Δ a empenhar de R$ 1.375.737,34 (56% do contrato)","Liquidado a pagar em 25/08/2026: R$ 165.343,81 (NE 000144) — 17% do empenhado"]},
+ flags:["Empenhos executados pela S&V, empresa que não consta do resumo 2026 (contrato próprio 15306603000122026)","Atribuição por exclusão: as NEs Consterra fecham o contrato da Pavimentação; a NE S&V corresponde a este objeto","Δ a empenhar de R$ 1.375.737,34 (56% do contrato)","Liquidado a pagar em 28/09/2026: R$ 30.472,46 (NE 000144) — caiu de R$ 165.343,81 em agosto"]},
 u_sivuca:{g:"conv",nome:"Memorial Sivuca (reforma do imóvel)",sub:"V0000N01ISN · MJM Engenharia · Convênio FDE 078/2025 · Contrato 017/2025-SOF",pi:"V0000N01ISN",uo:"26240 · UGR 150899 (Prefeitura Universitária) · PTRES 230106",emp:"MJM ENGENHARIA (20.519.592/0001-60)",contrato:1074000.00,prev:1126372.20,prevN:"valor digitado (4,88%) — a 7% seria 1.149.180,00 (−22.807,80)",adit:null,e24:0,e25:20000.00,e26:529722.41,
  rp:"Dotação total: 549.722,41 em 3 créditos, 100% empenhada (crédito disponível R$ 0) — 2025: 20.000,00 (fonte 1050 — recursos próprios) · 2026: 400.000,00 (fonte 1081A00557 — convênio) + 129.722,41 (fonte 1050A001XC — recursos próprios) · ND 33.90.39 · Liquidado: 128.718,75 · Pago: 140.585,66 (incl. RAP)",
  nes:"NE 2025: 000473 (20.000,00 — 30/12/2025, empenho inicial com recursos UFPB; pago via RAP) · NE 2026: 000241 (líq. 298.992,92, a liquidar), 000275 (reconhecimento de dívida 101.007,08 — liquidada; paga 92.873,99), 000193 (líq. 102.010,74, a liquidar) e 000225 (27.711,67 — liquidada e paga)",
@@ -433,6 +435,167 @@ const EV=[
 {k:"2026-12-23",d:"23/12/2026",cat:"instr",g:["u_sivuca"],c:"fut",t:"Fim da vigência do convênio",x:"Prestação final em 60 dias; prorrogação ex officio cabível pelos atrasos do FDE (Cláusula 4ª, I.2). Obra sem empenho.",s:"convênio sivuca.pdf"}
 ];
 
+
+/* ============ GERADOR DE OFÍCIO + ANEXO (.docx) ============ */
+/* ====== DADOS DA POSIÇÃO ====== */
+const LIQDATA={
+ data:"28/09/2026", dataExt:"28 de setembro de 2026", mes:"SET/2026", total:1807846.83,
+ grupos:[
+  {rp:"2", nome:"PRIMÁRIO DISCRICIONÁRIO — recursos próprios da UFPB", sub:61153.18, itens:[
+   {obra:'Urbanização do Auditório do CCHSA e calçadas — Campus III', pi:'VSS25G41PG4', ne:'153066152312026NE000144', fonte:'1000000000', v:30472.46},
+   {obra:'Bloco "D" do Centro de Educação (Pós-Graduação do CE)', pi:'VSS25G41JG7', ne:'153066152312025NE000222', fonte:'1000000000 (RAP)', v:24819.87},
+   {obra:'Novo Ginásio Didático do CCS', pi:'VSS25G41PC2', ne:'153066152312026NE000261', fonte:'1081A00557 (convênio)', v:5860.85}]},
+  {rp:"3", nome:"PRIMÁRIO SEM IMPACTO FISCAL — PAC / TED-MEC (UO 26101)", sub:119487.61, itens:[
+   {obra:'Construção da Unidade de Hospitalidade', pi:'VSS25G41MI9', ne:'153066152312025NE000150', fonte:'1000A0008U', v:97989.21},
+   {obra:'Conclusão do Laboratório IDEP', pi:'VSS25G41ML5', ne:'153066152312025NE000252', fonte:'1000A0008U', v:11545.87},
+   {obra:'Conclusão do Bloco de Biotecnologia (CBIOTEC)', pi:'VSS25G41MI0', ne:'153066152312025NE000171', fonte:'1000A0008U', v:8414.73},
+   {obra:'Construção da Unidade de Hospitalidade', pi:'VSS25G41MI9', ne:'153066152312025NE000249', fonte:'1000A0008U', v:1537.80}]},
+  {rp:"7", nome:"DESPESA DECORRENTE DE EMENDA DE BANCADA", sub:1497058.82, itens:[
+   {obra:'Pavimentação dos acessos principais — Campus III', pi:'VSS25G41PG4', ne:'153066152312025NE000475', fonte:'1000000000', v:708776.31},
+   {obra:'Bloco "D" do Centro de Educação (Pós-Graduação do CE)', pi:'VSS25G41JG7', ne:'153066152312023NE000381', fonte:'1000000000 (RAP)', v:321959.12},
+   {obra:'Construção do Laboratório de Tipificação de Carcaças', pi:'VSS25G41OT8', ne:'153066152312025NE000468', fonte:'1000000000', v:223907.08},
+   {obra:'Complementação e Enfrentamento — Centro Profissional e Tecnológico', pi:'LSS25G41KI1', ne:'153066152312025NE000352', fonte:'1000000000', v:121316.43},
+   {obra:'Novo Ginásio Didático do CCS', pi:'VSS25G41PC2', ne:'153066152312025NE000474', fonte:'1000000000', v:101139.31},
+   {obra:'Bloco "D" do Centro de Educação (Pós-Graduação do CE)', pi:'VSS25G41JG7', ne:'153066152312025NE000351', fonte:'1000000000', v:19960.57}]},
+  {rp:"8", nome:"DESPESA DECORRENTE DE EMENDA DE COMISSÃO (SF/CD/CN) — TED-MEC (UO 26101)", sub:130147.22, itens:[
+   {obra:'DIGICON/LAVID — Centro de Informática (etapa)', pi:'VSS25G41JG8', ne:'153066152312023NE000380', fonte:'1444A002BY (RAP)', v:130147.22}]}
+ ]};
+
+/* ====== UTILITÁRIOS ====== */
+const fmtBR=n=>n.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+function extenso(v){
+ const u=["","um","dois","três","quatro","cinco","seis","sete","oito","nove","dez","onze","doze","treze","quatorze","quinze","dezesseis","dezessete","dezoito","dezenove"];
+ const d=["","","vinte","trinta","quarenta","cinquenta","sessenta","setenta","oitenta","noventa"];
+ const c=["","cento","duzentos","trezentos","quatrocentos","quinhentos","seiscentos","setecentos","oitocentos","novecentos"];
+ function ate999(n){ if(n===0)return ""; if(n===100)return "cem";
+  let t=[],r=n; const ci=Math.floor(r/100); if(ci){t.push(c[ci]); r%=100;}
+  if(r){ if(r<20)t.push(u[r]); else {const di=Math.floor(r/10); t.push(d[di]); if(r%10)t.push(u[r%10]);} }
+  return t.join(" e "); }
+ const inteiro=Math.floor(v), cents=Math.round((v-inteiro)*100);
+ const mi=Math.floor(inteiro/1000000), mil=Math.floor((inteiro%1000000)/1000), un=inteiro%1000;
+ let p=[];
+ if(mi) p.push(ate999(mi)+(mi===1?" milhão":" milhões"));
+ if(mil) p.push(ate999(mil)+" mil");
+ if(un) p.push(ate999(un));
+ let s=p.join(", ");
+ const i=s.lastIndexOf(", "); if(i>-1) s=s.slice(0,i)+" e "+s.slice(i+2);
+ let out=s+(inteiro===1?" real":" reais");
+ if(cents) out+=" e "+ate999(cents)+(cents===1?" centavo":" centavos");
+ return out;
+}
+/* ====== ZIP (store) ====== */
+function crc32(buf){ let c,t=crc32.t; if(!t){t=crc32.t=[]; for(let n=0;n<256;n++){c=n; for(let k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1; t[n]=c;}}
+ let crc=0^(-1); for(let i=0;i<buf.length;i++) crc=(crc>>>8)^t[(crc^buf[i])&0xFF]; return (crc^(-1))>>>0; }
+function zipBlob(files){
+ const enc=new TextEncoder(), parts=[], central=[]; let off=0;
+ for(const f of files){
+  const nb=enc.encode(f.name), data=f.data, crc=crc32(data);
+  const lh=new Uint8Array(30+nb.length), dv=new DataView(lh.buffer);
+  dv.setUint32(0,0x04034b50,true); dv.setUint16(4,20,true); dv.setUint16(6,0,true); dv.setUint16(8,0,true);
+  dv.setUint16(10,0,true); dv.setUint16(12,0x2158,true); dv.setUint32(14,crc,true);
+  dv.setUint32(18,data.length,true); dv.setUint32(22,data.length,true);
+  dv.setUint16(26,nb.length,true); dv.setUint16(28,0,true); lh.set(nb,30);
+  parts.push(lh,data);
+  const ch=new Uint8Array(46+nb.length), cv=new DataView(ch.buffer);
+  cv.setUint32(0,0x02014b50,true); cv.setUint16(4,20,true); cv.setUint16(6,20,true);
+  cv.setUint16(8,0,true); cv.setUint16(10,0,true); cv.setUint16(12,0,true); cv.setUint16(14,0x2158,true);
+  cv.setUint32(16,crc,true); cv.setUint32(20,data.length,true); cv.setUint32(24,data.length,true);
+  cv.setUint16(28,nb.length,true); cv.setUint32(42,off,true); ch.set(nb,46);
+  central.push(ch); off+=lh.length+data.length;
+ }
+ const cdSize=central.reduce((a,b)=>a+b.length,0);
+ const eo=new Uint8Array(22), ev=new DataView(eo.buffer);
+ ev.setUint32(0,0x06054b50,true); ev.setUint16(8,files.length,true); ev.setUint16(10,files.length,true);
+ ev.setUint32(12,cdSize,true); ev.setUint32(16,off,true);
+ return new Blob([...parts,...central,eo],{type:"application/vnd.openxmlformats-officedocument.wordprocessingml.document"});
+}
+/* ====== WordprocessingML ====== */
+const P=(txt,o={})=>{
+ const {b,i,sz=22,jc,ind,after=120,line}=o;
+ const rpr=`<w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>${b?"<w:b/>":""}${i?"<w:i/>":""}<w:sz w:val="${sz}"/></w:rPr>`;
+ const ppr=`<w:pPr>${jc?`<w:jc w:val="${jc}"/>`:""}${ind?`<w:ind w:firstLine="${ind}"/>`:""}<w:spacing w:after="${after}"${line?` w:line="${line}" w:lineRule="auto"`:""}/></w:pPr>`;
+ return `<w:p>${ppr}<w:r>${rpr}<w:t xml:space="preserve">${esc(txt)}</w:t></w:r></w:p>`;
+};
+const BRK=`<w:p><w:r><w:br w:type="page"/></w:r></w:p>`;
+const CEL=(txt,{w,b,jc,fill,sz=18,color}={})=>
+ `<w:tc><w:tcPr><w:tcW w:w="${w}" w:type="dxa"/>${fill?`<w:shd w:val="clear" w:fill="${fill}"/>`:""}<w:vAlign w:val="center"/></w:tcPr>`+
+ `<w:p><w:pPr>${jc?`<w:jc w:val="${jc}"/>`:""}<w:spacing w:after="20"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>${b?"<w:b/>":""}<w:sz w:val="${sz}"/>${color?`<w:color w:val="${color}"/>`:""}</w:rPr><w:t xml:space="preserve">${esc(txt)}</w:t></w:r></w:p></w:tc>`;
+
+function buildDoc(numOficio){
+ const D=LIQDATA, W=[4100,2500,1700,1300];
+ const hoje=D.data;
+ let corpo="";
+ corpo+=P("MINISTÉRIO DA EDUCAÇÃO",{b:1,jc:"center",sz:20,after:0});
+ corpo+=P("UNIVERSIDADE FEDERAL DA PARAÍBA",{b:1,jc:"center",sz:20,after:0});
+ corpo+=P("GABINETE DA REITORA",{b:1,jc:"center",sz:20,after:200});
+ corpo+=P(`OFÍCIO Nº ${numOficio}/2026/GR/R/UFPB`,{b:1,after:160});
+ corpo+=P(`João Pessoa, ${D.dataExt}.`,{jc:"right",after:240});
+ corpo+=P("Ao Senhor",{after:0});
+ corpo+=P("ADALTON ROCHA DE MATOS",{b:1,after:0});
+ corpo+=P("Subsecretário de Planejamento e Orçamento — SPO/SE",{after:0});
+ corpo+=P("Ministério da Educação",{after:0});
+ corpo+=P("Esplanada dos Ministérios, Bloco L, Anexo I, 1º Andar — CEP 70047-900 — Brasília/DF",{after:240});
+ corpo+=P("Assunto: Solicitação de liberação de recursos financeiros para pagamento de despesas de obras já liquidadas — UO 26240.",{b:1,jc:"both",after:160});
+ corpo+=P("Senhor Subsecretário,",{after:160});
+ const T=fmtBR(D.total), E=extenso(D.total);
+ corpo+=P(`1. Cumprimentando-o cordialmente, dirijo-me a Vossa Senhoria para solicitar a liberação de recursos financeiros destinados ao pagamento de despesas de obras já liquidadas e pendentes de pagamento no âmbito desta Universidade, no montante de R$ ${T} (${E}), conforme posição de ${hoje}, extraída do SIAFI/Tesouro Gerencial na conta contábil 449051 — Obras e Instalações, detalhada no Anexo I deste expediente.`,{jc:"both",ind:709,line:300});
+ corpo+=P("2. As despesas referem-se a serviços de engenharia efetivamente executados, medidos e atestados pela Superintendência de Infraestrutura (SINFRA) desta Instituição, com liquidação regularmente registrada no SIAFI, restando pendente exclusivamente o estágio de pagamento, na forma do art. 62 da Lei nº 4.320/1964.",{jc:"both",ind:709,line:300});
+ const g7=D.grupos.find(g=>g.rp==="7"), pct=(g7.sub/D.total*100).toFixed(1).replace(".",",");
+ corpo+=P(`3. Do montante indicado, R$ ${fmtBR(g7.sub)} (${pct}%) correspondem a despesas custeadas por emendas de bancada (RP 7), destacando-se a Nota de Empenho nº 153066152312025NE000475, no valor de R$ 708.776,31, integralmente liquidada e sem qualquer pagamento desde dezembro de 2025.`,{jc:"both",ind:709,line:300});
+ corpo+=P("4. Cabe registrar que a ausência de liberação financeira tem produzido efeitos diretos sobre a execução contratual, com risco de suspensão dos serviços, desmobilização das empresas contratadas, paralisação das obras e consequente elevação dos custos, conforme diagnóstico consolidado no Plano de Ação para Mitigação dos Riscos Relacionados à Execução de Obras da UFPB (2026), aprovado por esta Reitoria.",{jc:"both",ind:709,line:300});
+ corpo+=P("5. Diante do exposto, e considerando o disposto no art. 166, §§ 12 e 13, da Constituição Federal, que impõe a execução obrigatória das programações decorrentes de emendas de bancada, solicita-se a adoção das providências necessárias à liberação do limite financeiro correspondente.",{jc:"both",ind:709,line:300});
+ corpo+=P("6. Colocamo-nos à disposição para prestar os esclarecimentos adicionais que se façam necessários.",{jc:"both",ind:709,line:300,after:260});
+ corpo+=P("Atenciosamente,",{after:420});
+ corpo+=P("TEREZINHA DOMICIANO DANTAS MARTINS",{b:1,jc:"center",after:0});
+ corpo+=P("Reitora da Universidade Federal da Paraíba",{jc:"center",after:0});
+ /* ---- ANEXO ---- */
+ corpo+=BRK;
+ corpo+=P("ANEXO I",{b:1,jc:"center",sz:24,after:60});
+ corpo+=P("DEMONSTRATIVO DE DESPESAS LIQUIDADAS A PAGAR — OBRAS",{b:1,jc:"center",sz:22,after:60});
+ corpo+=P(`Conta contábil 449051 (Obras e Instalações) · UG 153066 · Ação 15R3 · Posição: ${hoje} (mês de lançamento ${D.mes})`,{jc:"center",sz:18,after:240});
+ const H={b:1,fill:"1F3864",color:"FFFFFF"};
+ let linhas=`<w:tr><w:trPr><w:tblHeader/></w:trPr>`+
+   CEL("Obra / Plano Interno",{w:W[0],...H})+CEL("Nota de Empenho",{w:W[1],...H})+
+   CEL("Fonte",{w:W[2],...H})+CEL("Valor (R$)",{w:W[3],jc:"right",...H})+`</w:tr>`;
+ for(const g of D.grupos){
+  linhas+=`<w:tr>`+CEL(`RP ${g.rp} — ${g.nome}`,{w:W[0]+W[1]+W[2],b:1,fill:"D9E2F3"})+CEL(fmtBR(g.sub),{w:W[3],b:1,fill:"D9E2F3",jc:"right"})+`</w:tr>`;
+  for(const it of g.itens)
+   linhas+=`<w:tr>`+CEL(`${it.obra} (${it.pi})`,{w:W[0]})+CEL(it.ne,{w:W[1]})+CEL(it.fonte,{w:W[2]})+CEL(fmtBR(it.v),{w:W[3],jc:"right"})+`</w:tr>`;
+ }
+ linhas+=`<w:tr>`+CEL("TOTAL GERAL",{w:W[0]+W[1]+W[2],b:1,fill:"1F3864",color:"FFFFFF"})+CEL(fmtBR(D.total),{w:W[3],b:1,fill:"1F3864",jc:"right",color:"FFFFFF"})+`</w:tr>`;
+ const tbl=`<w:tbl><w:tblPr><w:tblW w:w="9600" w:type="dxa"/><w:tblBorders>`+
+  ["top","left","bottom","right","insideH","insideV"].map(x=>`<w:${x} w:val="single" w:sz="4" w:space="0" w:color="8EAADB"/>`).join("")+
+  `</w:tblBorders></w:tblPr>${linhas}</w:tbl>`;
+ corpo+=tbl;
+ corpo+=P("",{after:120});
+ corpo+=P("Notas: (i) valores extraídos do item de informação 54 — VALORES LIQUIDADOS A PAGAR (exercício + Restos a Pagar); (ii) RP = Resultado Primário; (iii) despesas medidas e atestadas pela SINFRA, com liquidação registrada e pagamento pendente; (iv) a Nota de Empenho 153066152312025NE000475 encontra-se liquidada e sem pagamento desde dezembro de 2025.",{sz:16,jc:"both",after:120});
+ corpo+=P(`Fonte: SIAFI / Tesouro Gerencial — Relatório de liquidados a pagar 2026 detalhado (conta 449051), extração de ${hoje}. Elaboração: Coordenação de Orçamento (CODEOR/PROPLAN).`,{sz:16,i:1,jc:"both"});
+ const doc=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>${corpo}<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1418" w:header="709" w:footer="709" w:gutter="0"/></w:sectPr></w:body></w:document>`;
+ const ct=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/></Types>`;
+ const rels=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>`;
+ const enc=new TextEncoder();
+ return zipBlob([
+  {name:"[Content_Types].xml",data:enc.encode(ct)},
+  {name:"_rels/.rels",data:enc.encode(rels)},
+  {name:"word/document.xml",data:enc.encode(doc)}]);
+}
+
+
+function gerarOficioDocx(){
+ const n=prompt("Número do ofício (deixe em branco para preencher depois):","");
+ const num=(n&&n.trim())?n.trim():"____";
+ const blob=buildDoc(num);
+ const a=document.createElement("a");
+ a.href=URL.createObjectURL(blob);
+ a.download="Oficio MEC - liquidados a pagar "+LIQDATA.data.replace(/\//g,"-")+".docx";
+ document.body.appendChild(a); a.click();
+ setTimeout(()=>{URL.revokeObjectURL(a.href); a.remove();},1500);
+}
+
 /* ================= RENDER ================= */
 let fGrp="todas", fObra="", fAno="todos", fTxt="";
 const tl=document.getElementById("tl"), calEl=document.getElementById("cal"), sel=document.getElementById("selobra");
@@ -453,7 +616,7 @@ pac:`<b>Execução.</b> As 4 obras do PAC empenharam R$ 6.838.266,69 em 2025 (21
 mec:`<b>Situação.</b> A etapa do DIGICON/LAVID está empenhada desde <b>27/12/2023</b> (NE 000380, R$ 2.196.882,22 — Contrato 14/2023, RDC 002/2023, RN Construções) e executa por <b>Restos a Pagar</b>: pagos acumulados de R$ 821.442,82 e <b>saldo RAP 2026 de R$ 1.375.439,40</b>. A NE 2026 (000214, R$ 21,97) foi lançada em 03/06 e estornada em 10/06.
 <ul><li><b>Cobertura:</b> 91,1% do contrato empenhado; Δ contrato − empenhado de R$ 214.009,67 — e a previsão de apostilamento 2026 (R$ 2.579.654,32 no resumo) não tem dotação nova correspondente.</li>
 <li><b>Origem do recurso confirmada:</b> o relatório de liquidados classifica a NE 2023 em <b>RP 8 (emenda de comissão SF/CD/CN), fonte 1444A002BY — TED-MEC, UO 26101</b>; o painel CODEOR a exibe na UGR da Prefeitura Universitária — uniformizar rótulos (o relatório chega a nomear o PI JG8 como "Prototipagem") antes de novo crédito.</li>
-<li><b>Fluxo financeiro saudável em 2026:</b> o estoque liquidado a pagar da NE 2023 (pico de R$ 356,6 mil em fev-mar) foi <b>integralmente pago até junho</b>; a execução segue pelo RAP (saldo R$ 1.375.439,40) — acompanhar limites de pagamento e validade da inscrição.</li></ul>`,
+<li><b>Fluxo reativado em setembro:</b> após ficar zerado de junho a agosto, o estoque liquidado a pagar da NE 2023 voltou com <b>R$ 130.147,22</b> em 28/09/2026 (pico anterior: R$ 356,6 mil em fev-mar); a execução segue pelo RAP (saldo R$ 1.375.439,40) — acompanhar limites de pagamento e validade da inscrição.</li></ul>`,
 ufpb:`<b>Padrão de execução.</b> Nas 9 obras do grupo, 2025 foi o ano do RP 7 — Rotas Acessíveis (5,90 mi, out), Centro Profissional (2,90 mi, set), Bloco D, Carcaças e Pavimentação em dezembro — e 2026, na ausência da emenda, tornou-se o ano do RP 2: R$ 5,12 mi empenhados até 11/08 com recursos próprios.
 <ul>
 <li><b>1. Emendas 2025 — atendimento integral frustrado por ato unilateral e sem aviso.</b> O planejamento previa a cobertura total da carteira com a emenda de bancada da LOA 2025, de execução obrigatória (CF, art. 166, §§ 12 e 13, na redação das EC 100/2019 e 126/2022). Sobrevieram, contudo, bloqueios sucessivos e o <b>cancelamento unilateral de R$ 6.565.660 em 19/12/2025</b> (SIOP 589674; Portaria nº 523, com amparo no art. 4º, § 1º, III, "c", item 19, da própria LOA 2025), <b>sem comunicação prévia aos órgãos executores</b> — na contramão do rito de limitação de empenho do art. 9º da LRF (LC nº 101/2000), que pressupõe ato transparente e critérios definidos na LDO, e da impositividade constitucional das emendas de bancada.</li>
@@ -474,29 +637,34 @@ conv:`<b>O ciclo completo da receita dos convênios (2025-2026)</b> — cada eta
 </ul>`
 };
 /* ===== Liquidados a pagar — série mensal 2026 (conta 449051) ===== */
-const LIQPANEL=`<div class="ficha"><div class="fhead" style="background:#b3261e"><h2>Liquidados a pagar — conta 449051 (Obras e Instalações) · série mensal 2026</h2><span class="fstat">Posição 25/08/2026: R$ 1.231.433,10 aguardando pagamento (exercício + RAP)</span></div>
+const LIQPANEL=`<div class="ficha"><div class="fhead" style="background:#b3261e"><h2>Liquidados a pagar — conta 449051 (Obras e Instalações) · série mensal 2026</h2><span class="fstat">Posição 28/09/2026: R$ 1.807.846,83 aguardando pagamento (exercício + RAP)</span></div>
 <div class="fwide">
-<p style="font-size:.9rem;margin:0 0 8px">Valores <b>liquidados e ainda não pagos</b> (item 54 — VALORES LIQUIDADOS A PAGAR, exercício + Restos a Pagar), UG 153066 · Ação 15R3 · UOs 26240/26101. Estoque no fim de cada mês de lançamento — medição das empresas já reconhecida contabilmente, <b>pressão imediata sobre o financeiro</b>.</p>
+<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:0 0 12px"><button class="btn-doc" onclick="gerarOficioDocx()">&#128196; Gerar ofício ao MEC + Anexo I (.docx)</button><span class="mini">Documento Word editável: ofício de solicitação de liberação financeira assinado pela Reitora + anexo detalhado por RP, obra e empenho.</span></div><p style="font-size:.9rem;margin:0 0 8px">Valores <b>liquidados e ainda não pagos</b> (item 54 — VALORES LIQUIDADOS A PAGAR, exercício + Restos a Pagar), UG 153066 · Ação 15R3 · UOs 26240/26101. Estoque no fim de cada mês de lançamento — medição das empresas já reconhecida contabilmente, <b>pressão imediata sobre o financeiro</b>.</p>
 
-<h3 style="margin:14px 0 6px;font-size:.95rem;color:#33475c">Posição atual — AGO/2026 (extraída em 25/08/2026)</h3>
+<h3 style="margin:14px 0 6px;font-size:.95rem;color:#33475c">Posição atual — SET/2026 (extraída em 28/09/2026)</h3>
 <table class="t">
-<tr><th>RP / origem</th><th>Obra</th><th>Nota de Empenho</th><th class="num">Liquidado a pagar (R$)</th><th class="num">Δ vs. 24/08</th></tr>
-<tr><td>2 — Discricionário (fonte 1000)</td><td>Urbanização CCHSA e calçadas <span class="mini">· PG4</span></td><td>2026NE000144 (S&V)</td><td class="num">165.343,81</td><td class="num">—</td></tr>
-<tr><td>2 — Discricionário</td><td>Pavimentação dos acessos — Campus III <span class="mini">· PG4</span></td><td>2026NE000221 (Consterra)</td><td class="num">75.671,52</td><td class="num">—</td></tr>
-<tr><td>2 — Discricionário</td><td>Pós-Graduação em Ecologia e Antropologia <span class="mini">· PK1</span></td><td>2026NE000143</td><td class="num">30.177,48</td><td class="num">—</td></tr>
-<tr class="tot"><td colspan="3">Subtotal RP 2</td><td class="num">271.192,81</td><td class="num">—</td></tr>
-<tr><td>3 — PAC (fonte 1000A0008U — TED-MEC · UO 26101)</td><td>Bloco de Pós-Graduação do CCHLA <span class="mini">· MH9</span></td><td>2025NE000250</td><td class="num">12.619,26</td><td class="num pos-t">− 65.411,08</td></tr>
-<tr><td>3 — PAC (TED-MEC)</td><td>Bloco de Biotecnologia (CBIOTEC) <span class="mini">· MI0</span></td><td>2025NE000171</td><td class="num">6.598,17</td><td class="num">—</td></tr>
-<tr class="tot"><td colspan="3">Subtotal RP 3 — PAC</td><td class="num">19.217,43</td><td class="num pos-t">− 65.411,08</td></tr>
-<tr><td>7 — Emenda de bancada</td><td>Pavimentação — Campus III <span class="mini">· PG4</span></td><td>2025NE000475 (Consterra)</td><td class="num">708.776,31</td><td class="num">— <span class="mini">(inalterado desde 31/12/25)</span></td></tr>
-<tr><td>7 — Emenda de bancada</td><td>Novo Ginásio Didático (CCS) <span class="mini">· PC2</span></td><td>2025NE000474</td><td class="num">103.646,32</td><td class="num">—</td></tr>
-<tr><td>7 — Emenda de bancada</td><td>Laboratório de Tipificação de Carcaças <span class="mini">· OT8</span></td><td>2025NE000468</td><td class="num">95.500,48</td><td class="num">— <span class="mini">(sem pagamento)</span></td></tr>
-<tr><td>7 — Emenda de bancada</td><td>Centro Profissional e Tecnológico <span class="mini">· KI1</span></td><td>2025NE000352</td><td class="num">14.986,43</td><td class="num">—</td></tr>
-<tr><td>7 — Emenda de bancada</td><td>Bloco "D" do Centro de Educação <span class="mini">· JG7</span></td><td>2023NE000381 <span class="mini">(RAP)</span></td><td class="num">11.797,01</td><td class="num">—</td></tr>
-<tr><td>7 — Emenda de bancada</td><td>Rotas Acessíveis <span class="mini">· OT9</span></td><td>2025NE000371</td><td class="num">6.316,31</td><td class="num">—</td></tr>
-<tr class="tot"><td colspan="3">Subtotal RP 7</td><td class="num">941.022,86</td><td class="num">—</td></tr>
-<tr class="tot"><td colspan="3"><b>Total geral — 25/08/2026</b></td><td class="num"><b>1.231.433,10</b></td><td class="num pos-t"><b>− 65.411,08</b></td></tr>
+<tr><th>RP / origem</th><th>Obra</th><th>Nota de Empenho</th><th class="num">Liquidado a pagar (R$)</th><th class="num">Δ vs. AGO/2026</th></tr>
+<tr><td>2 — Discricionário (fonte 1000)</td><td>Urbanização CCHSA e calçadas <span class="mini">· PG4</span></td><td>2026NE000144 (S&V)</td><td class="num">30.472,46</td><td class="num neg-t">+ 11.705,94</td></tr>
+<tr><td>2 — Discricionário</td><td>Bloco "D" do Centro de Educação <span class="mini">· JG7</span></td><td>2025NE000222 <span class="mini">(RAP)</span></td><td class="num">24.819,87</td><td class="num neg-t">novo</td></tr>
+<tr><td>2 — Convênio (fonte 1081A00557)</td><td>Novo Ginásio Didático (CCS) <span class="mini">· PC2</span></td><td>2026NE000261</td><td class="num">5.860,85</td><td class="num neg-t">novo</td></tr>
+<tr class="tot"><td colspan="3">Subtotal RP 2</td><td class="num">61.153,18</td><td class="num pos-t">− 38.369,76</td></tr>
+<tr><td>3 — PAC (fonte 1000A0008U — TED-MEC · UO 26101)</td><td>Unidade de Hospitalidade <span class="mini">· MI9</span></td><td>2025NE000150</td><td class="num">97.989,21</td><td class="num neg-t">novo</td></tr>
+<tr><td>3 — PAC (TED-MEC)</td><td>Laboratório IDEP <span class="mini">· ML5</span></td><td>2025NE000252</td><td class="num">11.545,87</td><td class="num neg-t">+ 8.073,76</td></tr>
+<tr><td>3 — PAC (TED-MEC)</td><td>Bloco de Biotecnologia (CBIOTEC) <span class="mini">· MI0</span></td><td>2025NE000171</td><td class="num">8.414,73</td><td class="num pos-t">− 92.401,12</td></tr>
+<tr><td>3 — PAC (TED-MEC)</td><td>Unidade de Hospitalidade <span class="mini">· MI9</span></td><td>2025NE000249</td><td class="num">1.537,80</td><td class="num neg-t">novo</td></tr>
+<tr class="tot"><td colspan="3">Subtotal RP 3 — PAC</td><td class="num">119.487,61</td><td class="num pos-t">− 63.337,23</td></tr>
+<tr><td>7 — Emenda de bancada</td><td>Pavimentação — Campus III <span class="mini">· PG4</span></td><td>2025NE000475 (Consterra)</td><td class="num">708.776,31</td><td class="num">— <span class="mini">(travada desde 31/12/25)</span></td></tr>
+<tr><td>7 — Emenda de bancada</td><td>Bloco "D" do Centro de Educação <span class="mini">· JG7</span></td><td>2023NE000381 <span class="mini">(RAP)</span></td><td class="num">321.959,12</td><td class="num neg-t">+ 302.241,26</td></tr>
+<tr><td>7 — Emenda de bancada</td><td>Laboratório de Tipificação de Carcaças <span class="mini">· OT8</span></td><td>2025NE000468</td><td class="num">223.907,08</td><td class="num neg-t">+ 128.406,60</td></tr>
+<tr><td>7 — Emenda de bancada</td><td>Centro Profissional e Tecnológico <span class="mini">· KI1</span></td><td>2025NE000352</td><td class="num">121.316,43</td><td class="num pos-t">− 16.814,73</td></tr>
+<tr><td>7 — Emenda de bancada</td><td>Novo Ginásio Didático (CCS) <span class="mini">· PC2</span></td><td>2025NE000474</td><td class="num">101.139,31</td><td class="num pos-t">− 8.524,97</td></tr>
+<tr><td>7 — Emenda de bancada</td><td>Bloco "D" do Centro de Educação <span class="mini">· JG7</span></td><td>2025NE000351</td><td class="num">19.960,57</td><td class="num neg-t">novo</td></tr>
+<tr class="tot"><td colspan="3">Subtotal RP 7</td><td class="num">1.497.058,82</td><td class="num neg-t">+ 418.550,48</td></tr>
+<tr><td>8 — Emenda de comissão (TED-MEC · UO 26101)</td><td>DIGICON/LAVID — Centro de Informática <span class="mini">· JG8</span></td><td>2023NE000380 <span class="mini">(RAP)</span></td><td class="num">130.147,22</td><td class="num neg-t">reativado</td></tr>
+<tr class="tot"><td colspan="3">Subtotal RP 8</td><td class="num">130.147,22</td><td class="num neg-t">+ 130.147,22</td></tr>
+<tr class="tot"><td colspan="3"><b>Total geral — 28/09/2026</b></td><td class="num"><b>1.807.846,83</b></td><td class="num neg-t"><b>+ 446.990,71</b></td></tr>
 </table>
+<p class="mini">Quitados entre agosto e setembro: Pavimentação NE 000221 (R$ 75.671,52) · CCHLA NE 000250 (R$ 28.912,95) · Rotas Acessíveis NE 000371 (R$ 6.718,25) · Pós-Ecologia NE 000143 (R$ 5.084,90) · CBIOTEC NE 000251 (R$ 49.623,93).</p>
 
 <h3 style="margin:16px 0 6px;font-size:.95rem;color:#33475c">Evolução mensal do estoque por Resultado Primário (R$)</h3>
 <table class="t">
@@ -509,12 +677,11 @@ const LIQPANEL=`<div class="ficha"><div class="fhead" style="background:#b3261e"
 <tr><td>MAI/2026</td><td class="num">—</td><td class="num">165.726,61</td><td class="num">—</td><td class="num">94.011,54</td><td class="num">1.136,67</td><td class="num">260.874,82</td></tr>
 <tr><td>JUN/2026</td><td class="num">65.383,75</td><td class="num">180.104,79</td><td class="num">—</td><td class="num">431.250,23</td><td class="num">—</td><td class="num">676.738,77</td></tr>
 <tr><td>JUL/2026</td><td class="num">31.531,54</td><td class="num">216.201,75</td><td class="num">—</td><td class="num">981.424,21</td><td class="num">—</td><td class="num">1.229.157,50</td></tr>
-<tr><td>AGO/2026 (posição 14/08)</td><td class="num">807.905,67</td><td class="num">119.907,21</td><td class="num">—</td><td class="num">994.631,65</td><td class="num">—</td><td class="num">1.922.444,53</td></tr>
-<tr><td>AGO/2026 (posição 24/08)</td><td class="num">271.192,81</td><td class="num">84.628,51</td><td class="num">—</td><td class="num">941.022,86</td><td class="num">—</td><td class="num">1.296.844,18</td></tr>
-<tr class="tot"><td>AGO/2026 (posição 25/08)</td><td class="num">271.192,81</td><td class="num">19.217,43</td><td class="num">—</td><td class="num">941.022,86</td><td class="num">—</td><td class="num">1.231.433,10</td></tr>
+<tr><td>AGO/2026 <span class="mini">(fechado)</span></td><td class="num">99.522,94</td><td class="num">182.824,84</td><td class="num">—</td><td class="num">1.078.508,34</td><td class="num">—</td><td class="num">1.360.856,12</td></tr>
+<tr class="tot"><td>SET/2026 (posição 28/09)</td><td class="num">61.153,18</td><td class="num">119.487,61</td><td class="num">—</td><td class="num">1.497.058,82</td><td class="num">130.147,22</td><td class="num">1.807.846,83</td></tr>
 </table>
 
-<p class="mini"><b>Leituras (posição 25/08/2026):</b> (1) Único movimento em relação a 24/08: o <b>CCHLA (PAC) caiu de R$ 78.030,34 para R$ 12.619,26</b> (−R$ 65.411,08) — pagamento no TED-MEC; o estoque total fecha em R$ 1.231.433,10. (2) O grupo <b>PAC praticamente zerou</b> (R$ 19.217,43 no total), enquanto <b>76,4% de todo o estoque é RP 7</b> (R$ 941.022,86), inalterado há mais de dez dias. (3) <b>A NE 000475 (Pavimentação, RP 7, empenhada em 31/12/2025) segue travada em R$ 708.776,31 sem nenhum pagamento — 57,6% de todo o estoque</b>: é o principal gargalo financeiro da carteira. (4) <b>Carcaças (R$ 95.500,48)</b> também permanece sem qualquer pagamento desde a entrada no estoque. (5) Padrão consolidado: o que é custeado por <b>recursos próprios (RP 2) flui</b>; o que depende de <b>emenda de bancada (RP 7) não anda</b>. Fonte: Relatório liquidados a pagar 2026 detalhado 449051 (Tesouro Gerencial), abas 000/2026 a AGO/2026, extração 25/08/2026.</p>
+<p class="mini"><b>Leituras (posição 28/09/2026):</b> (1) O estoque <b>voltou a subir: +R$ 446.990,71 em relação ao fechamento de agosto</b>, atingindo R$ 1,81 mi — o maior nível de todo o exercício. (2) A concentração em emenda de bancada se agravou: <b>RP 7 responde por 82,8% do total</b> (R$ 1.497.058,82), com alta de R$ 418,6 mil no mês. (3) <b>A NE 000475 (Pavimentação, RP 7, empenhada em 31/12/2025) completa nove meses travada em R$ 708.776,31 sem um único pagamento</b> — 39,2% de todo o estoque. (4) Novos acúmulos relevantes em RP 7: <b>Bloco "D" saltou para R$ 321.959,12</b> (+R$ 302,2 mil na NE 2023, em RAP) e <b>Carcaças mais que dobrou, para R$ 223.907,08</b>. (5) O <b>RP 8 foi reativado</b>: o DIGICON/LAVID (NE 2023, TED-MEC) voltou ao estoque com R$ 130.147,22 após ficar zerado desde junho. (6) O que depende de <b>recursos próprios e do PAC segue fluindo</b> (RP 2 caiu para R$ 61,2 mil; PAC quitou CCHLA e quase todo o CBIOTEC), mas entrou nova medição da <b>Unidade de Hospitalidade (R$ 99.527,01)</b>. (7) Padrão consolidado do exercício: <b>pagamento normal no discricionário e no TED/PAC; estagnação no RP 7</b>, cuja emenda de 2026 permanece bloqueada. Fonte: Relatório liquidados a pagar 2026 detalhado 449051 (Tesouro Gerencial), abas 000/2026 a SET/2026, extração 28/09/2026.</p>
 </div></div>`;
 function anaBox(g){
   if(!ANALISE[g]) return "";

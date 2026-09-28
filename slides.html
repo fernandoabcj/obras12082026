@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Obras UFPB 2025-2026 — Slides</title>
+<style>
+  :root{--navy:#122439;--ink:#1c2733;--mut:#5b6b7c;--pac:#0b6e4f;--mec:#1e5aa8;--ufpb:#b0761a;--conv:#7c4bad;--red:#b3261e;--soft:#f6f8fb;--line:#d9e1ea;}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Segoe UI",Calibri,Arial,sans-serif;background:#0d1826;color:var(--ink);}
+  .slide{display:none;width:100vw;height:100vh;padding:4.5vh 5vw;background:#fff;flex-direction:column;overflow:hidden;}
+  .slide.on{display:flex;}
+  .kick{font-size:1.5vh;font-weight:800;letter-spacing:.25em;text-transform:uppercase;margin:0 0 .8vh;}
+  h1{font-size:5vh;font-weight:750;color:var(--ink);margin:0 0 2.5vh;}
+  .dark{background:var(--navy);color:#fff;justify-content:center;}
+  .dark h1{color:#fff;font-size:7vh;}
+  .dark .sub{color:#cadcfc;font-size:2.8vh;margin:0 0 1.5vh;}
+  .dark .mini{color:#8fa9c4;font-size:1.9vh;}
+  .dark .strip{color:#fff;font-weight:700;font-size:2.1vh;margin-top:6vh;}
+  .kgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6vh;}
+  .kpi{background:var(--soft);border:1px solid var(--line);border-radius:1.2vh;padding:1.8vh 2vh;}
+  .kpi b{display:block;font-size:2.9vh;margin-bottom:.6vh;}
+  .kpi span{font-size:1.7vh;color:var(--mut);line-height:1.35;display:block;}
+  .k4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4vh;margin-bottom:2.2vh;}
+  table{border-collapse:collapse;width:100%;font-size:1.9vh;}
+  th,td{border:1px solid var(--line);padding:1vh 1.2vh;text-align:left;}
+  th{background:var(--navy);color:#fff;font-size:1.7vh;text-transform:uppercase;letter-spacing:.05em;}
+  td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;}
+  tr.tot td{font-weight:750;background:#eef2f7;}
+  tr.grand td{font-weight:750;background:var(--navy);color:#fff;}
+  ul{margin:1.5vh 0 0;padding-left:2.6vh;}
+  li{font-size:2.1vh;margin:1.2vh 0;line-height:1.45;}
+  .note{background:#fdf6e8;border:1px solid #ecd9ad;border-radius:1vh;padding:1.6vh 2vh;font-size:1.95vh;margin-top:2vh;line-height:1.45;}
+  .obs{font-size:1.75vh;color:var(--mut);font-style:italic;margin-top:1.8vh;}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:2vh;flex:1;}
+  .col{background:var(--soft);border:1px solid var(--line);border-radius:1.2vh;padding:2vh 2.2vh;}
+  .col h3{margin:0 0 1vh;font-size:2.1vh;}
+  .col li{font-size:1.85vh;}
+  .steps{display:grid;grid-template-columns:1fr 1fr;gap:1.2vh 3vh;flex:1;align-content:start;}
+  .step{display:flex;gap:1.4vh;align-items:flex-start;}
+  .step i{flex:0 0 3.6vh;height:3.6vh;border-radius:50%;background:var(--conv);color:#fff;font-style:normal;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.9vh;}
+  .step p{margin:0;font-size:1.8vh;line-height:1.4;}
+  .pend .step i{background:var(--navy);}
+  .pend .step p{font-size:2vh;}
+  .foot{margin-top:auto;padding-top:1.5vh;display:flex;justify-content:space-between;font-size:1.5vh;color:var(--mut);}
+  #nav{position:fixed;bottom:2vh;right:2vw;z-index:10;display:flex;gap:.6vh;align-items:center;background:rgba(18,36,57,.85);border-radius:3vh;padding:.8vh 1.6vh;color:#fff;font-size:1.8vh;}
+  #nav button{background:none;border:none;color:#fff;font-size:2.6vh;cursor:pointer;padding:0 .6vh;}
+  @media print{
+    body{background:#fff}
+    .slide{display:flex !important;page-break-after:always;height:auto;min-height:96vh;}
+    #nav{display:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- 1 CAPA -->
+<section class="slide dark on">
+  <h1>Obras UFPB — 2025 / 2026</h1>
+  <p class="sub">Estudo orçamentário obra a obra: contratos, apostilamentos 2026, empenhos e diferenças</p>
+  <p class="mini">PAC (RP 3) · Recurso MEC (UO 26101) · Obras UFPB (UO 26240) · Obras convênio (fonte 1081) · Liquidados a pagar</p>
+  <p class="strip">16 obras individualizadas&nbsp;&nbsp;·&nbsp;&nbsp;37 NEs&nbsp;&nbsp;·&nbsp;&nbsp;R$ 44,59 mi em contratos&nbsp;&nbsp;·&nbsp;&nbsp;R$ 28,59 mi empenhados (2023-2026)</p>
+  <p class="mini" style="margin-top:5vh">CODEOR / PROPLAN · UO 26240 e 26101 · UG 153066 · Posição documental: 11/08/2026</p>
+</section>
+
+<!-- 2 VISAO GERAL KPIs -->
+<section class="slide">
+  <p class="kick" style="color:var(--navy)">Visão geral</p><h1>Números-chave do estudo</h1>
+  <div class="kgrid">
+    <div class="kpi"><b>R$ 44.591.125,76</b><span>Contratos vigentes das 16 obras do resumo 2026</span></div>
+    <div class="kpi"><b style="color:var(--ufpb)">R$ 47.594.563,75</b><span>Previsão 2026 com apostilamento (regra +7%; 4 linhas fora da regra: −R$ 117.940,81)</span></div>
+    <div class="kpi"><b style="color:var(--pac)">R$ 28.593.753,70</b><span>Empenhado 2023-2026 (37 NEs): 2023 R$ 4,45 mi (RAP) · 2025 R$ 18,49 mi · 2026 R$ 5,65 mi</span></div>
+    <div class="kpi"><b style="color:var(--red)">R$ 20.400.000</b><span>Emenda de bancada 2026 (RP 7 · 15R3): 100% bloqueada — nenhuma NE de RP 7 em 2026</span></div>
+    <div class="kpi"><b style="color:var(--mec)">Aditivos PAC 2026</b><span>Pleiteados para as 4 obras RP 3 — Ofícios 845/856/2025 e 280/2026/GR; aguardando DIFES/SESu-MEC</span></div>
+    <div class="kpi"><b style="color:var(--red)">R$ 1.324.657,98</b><span>Liquidados a pagar em AGO/2026 (conta 449051) — 81,3% em emenda de bancada; PAC com R$ 216,2 mil</span></div>
+  </div>
+  <p class="obs">Divergências críticas em aberto: favorecidos trocados entre PK1 e PC7 (contratos 010 e 011/2026) · contrato do CCHLA divergente em R$ 254.270,95 (resumo × ofício PAC) · empresa S&V empenhada e ausente do resumo.</p>
+  <div class="foot"><span>Estudo Obras UFPB 2025-2026 · CODEOR/PROPLAN · posição 11/08/2026</span><span>2</span></div>
+</section>
+
+<!-- 3 CONSOLIDADO -->
+<section class="slide">
+  <p class="kick" style="color:var(--navy)">Visão geral</p><h1>Consolidado por grupo (R$)</h1>
+  <table>
+    <tr><th>Grupo</th><th class="n">Contratos</th><th class="n">Previsão 2026</th><th class="n">Empenhado 23-25</th><th class="n">Empenhado 26</th><th class="n">Δ Previsão − a empenhar</th></tr>
+    <tr><td style="color:var(--pac);font-weight:700">PAC — RP 3 (UO 26101) · 4 obras</td><td class="n">13.879.058,10</td><td class="n">14.836.566,95</td><td class="n">6.838.266,69</td><td class="n">138,42</td><td class="n">7.998.161,84</td></tr>
+    <tr><td style="color:var(--mec);font-weight:700">Recurso MEC (não PAC) · 1 obra</td><td class="n">2.410.891,89</td><td class="n">2.579.654,32</td><td class="n">2.196.882,22</td><td class="n">0,00</td><td class="n">382.772,10</td></tr>
+    <tr><td style="color:var(--ufpb);font-weight:700">Obras UFPB (UO 26240) · 9 obras</td><td class="n">22.721.276,54</td><td class="n">24.230.658,11</td><td class="n">13.384.637,44</td><td class="n">4.117.512,76</td><td class="n">6.728.507,91</td></tr>
+    <tr><td style="color:var(--conv);font-weight:700">Obras convênio (fonte 1081) · 2 obras</td><td class="n">5.579.899,23</td><td class="n">5.947.684,38</td><td class="n">526.548,70</td><td class="n">1.529.767,47</td><td class="n">3.891.368,21</td></tr>
+    <tr class="tot"><td>Total</td><td class="n">44.591.125,76</td><td class="n">47.594.563,75</td><td class="n">22.946.335,05</td><td class="n">5.647.418,65</td><td class="n">19.000.810,05</td></tr>
+  </table>
+  <p class="obs">Aditivo PAC 2026: pleiteado — Ofício nº 280/2026/GR. Estágio: empenho líquido; liquidação/pagamento apenas onde indicado.</p>
+  <div class="foot"><span>Estudo Obras UFPB 2025-2026 · CODEOR/PROPLAN · posição 11/08/2026</span><span>3</span></div>
+</section>
+
+<!-- 4 PAC -->
+<section class="slide">
+  <p class="kick" style="color:var(--pac)">PAC — RP 3 (UO 26101/MEC)</p><h1>4 obras executadas por destaque MEC</h1>
+  <table>
+    <tr><th>Obra · PI</th><th class="n">Contrato</th><th class="n">Previsão 2026</th><th class="n">Empenhado 23-26</th><th class="n">Cobertura</th></tr>
+    <tr><td>Bloco de Pós-Graduação do CCHLA · MH9</td><td class="n">4.463.269,84</td><td class="n">4.775.698,73</td><td class="n">2.526.316,34</td><td class="n">56,6%</td></tr>
+    <tr><td>Bloco de Biotecnologia (CBIOTEC) · MI0</td><td class="n">5.190.000,00</td><td class="n">5.538.122,44</td><td class="n">1.574.055,38</td><td class="n">30,3%</td></tr>
+    <tr><td>Unidade de Hospitalidade · MI9</td><td class="n">3.212.184,53</td><td class="n">3.437.037,45</td><td class="n">1.738.023,25</td><td class="n">54,1%</td></tr>
+    <tr><td>Laboratório IDEP / Efic. Energética · ML5</td><td class="n">1.013.603,73</td><td class="n">1.085.708,33</td><td class="n">1.000.010,14</td><td class="n">98,7%</td></tr>
+    <tr class="tot"><td>Total</td><td class="n">13.879.058,10</td><td class="n">14.836.566,95</td><td class="n">6.838.405,11</td><td class="n">49,3%</td></tr>
+  </table>
+  <div class="note"><b>Execução 2025:</b> R$ 6.838.266,69 em 21 movimentações (mar–nov), todas na UO 26101/RP 3. Em 2026, apenas centavos reinscritos na UO 26240 — não há dotação nova. <b>Providência-chave:</b> suplementação e atendimento integral do TED/PAC atual e da complementação já solicitada (Ofícios nº 845 e 856/2025/GR e nº 280/2026/GR, proc. 23074.014406/2019-20 — sem resposta da DIFES/SESu).</div>
+  <div class="foot"><span>Estudo Obras UFPB 2025-2026 · CODEOR/PROPLAN · posição 11/08/2026</span><span>4</span></div>
+</section>
+
+<!-- 5 MEC -->
+<section class="slide">
+  <p class="kick" style="color:var(--mec)">Recurso MEC — UO 26101 (não PAC)</p><h1>DIGICON/LAVID — Centro de Informática (etapa)</h1>
+  <div class="k4">
+    <div class="kpi"><b>R$ 2.410.891,89</b><span>Contrato 14/2023 (RDC 002/2023) — RN Construções</span></div>
+    <div class="kpi"><b style="color:var(--mec)">R$ 2.196.882,22</b><span>NE 2023 000380, empenhada em 27/12/2023 (91,1% do contrato)</span></div>
+    <div class="kpi"><b style="color:var(--pac)">R$ 821.442,82</b><span>Restos a Pagar — pagos acumulados</span></div>
+    <div class="kpi"><b style="color:var(--red)">R$ 1.375.439,40</b><span>Saldo RAP a pagar em 2026</span></div>
+  </div>
+  <ul>
+    <li>NE 2026 (000214, R$ 21,97) lançada em 03/06 e estornada em 10/06 — sem empenho novo no exercício.</li>
+    <li>Divergência de classificação: o resumo 2026 posiciona a obra na UO 26101 (MEC), mas as NEs saíram na UO 26240.</li>
+    <li>Previsão de apostilamento 2026 (R$ 2.579.654,32) sem dotação nova correspondente — Δ a empenhar de R$ 382.772,10.</li>
+    <li>Execução 2026 depende do fluxo financeiro dos Restos a Pagar (limites de pagamento e validade da inscrição).</li>
+  </ul>
+  <div class="foot"><span>Estudo Obras UFPB 2025-2026 · CODEOR/PROPLAN · posição 11/08/2026</span><span>5</span></div>
+</section>
+
+<!-- 6 UFPB TABELA -->
+<section class="slide">
+  <p class="kick" style="color:var(--ufpb)">Obras UFPB — UO 26240</p><h1>9 obras · emendas RP 6/7 e discricionário RP 2</h1>
+  <table style="font-size:1.75vh">
+    <tr><th>Obra · PI</th><th class="n">Contrato</th><th class="n">Empenhado 23-26</th><th class="n">Cobertura</th></tr>
+    <tr><td>Centro Profissional e Tecnológico · KI1</td><td class="n">3.191.272,23</td><td class="n">2.984.728,98</td><td class="n">93,5%</td></tr>
+    <tr><td>Laboratório de Prototipagem CEAR · HG3</td><td class="n">300.265,89</td><td class="n">300.265,89</td><td class="n">100%</td></tr>
+    <tr><td>Bloco "D" do Centro de Educação · JG7</td><td class="n">2.991.867,26</td><td class="n">2.991.867,26</td><td class="n">100%</td></tr>
+    <tr><td>Lab. de Tipificação de Carcaças · OT8</td><td class="n">499.000,00</td><td class="n">499.000,00</td><td class="n">100%</td></tr>
+    <tr><td>Rotas Acessíveis · OT9</td><td class="n">5.899.999,00</td><td class="n">5.899.999,00</td><td class="n">100%</td></tr>
+    <tr><td>Reforma SODS / Hall da Reitoria · PC7</td><td class="n">1.957.686,16</td><td class="n">434.465,30</td><td class="n">22,2%</td></tr>
+    <tr><td>Pós-Grad. Ecologia e Antropologia · PK1</td><td class="n">2.560.000,00</td><td class="n">293.622,09</td><td class="n">11,5%</td></tr>
+    <tr><td>Pavimentação Campus III · PG4 (obj. 1)</td><td class="n">3.139.000,00</td><td class="n">3.139.000,00</td><td class="n">100%</td></tr>
+    <tr><td>Urbanização CCHSA · PG4 (obj. 2)</td><td class="n">2.182.186,00</td><td class="n">959.201,68</td><td class="n">44,0%</td></tr>
+    <tr class="tot"><td>Total</td><td class="n">22.721.276,54</td><td class="n">17.502.150,20</td><td class="n">77,0%</td></tr>
+  </table>
+  <div class="foot"><span>Estudo Obras UFPB 2025-2026 · CODEOR/PROPLAN · posição 11/08/2026</span><span>6</span></div>
+</section>
+
+<!-- 7 UFPB PANORAMA -->
+<section class="slide">
+  <p class="kick" style="color:var(--ufpb)">Obras UFPB — UO 26240</p><h1>Panorama analítico: 4 fundamentos</h1>
+  <ul style="margin-top:0">
+    <li><b>1. Emendas 2025 — atendimento integral frustrado por ato unilateral e sem aviso.</b> Cobertura total prevista com a emenda de bancada da LOA 2025 (CF, art. 166, §§ 12-13 — EC 100/2019 e 126/2022). Sobrevieram bloqueios e o cancelamento de R$ 6.565.660 em 19/12/2025 (SIOP 589674, Portaria nº 523), sem comunicação prévia — na contramão do art. 9º da LRF (LC 101/2000).</li>
+    <li><b>2. Emendas 2026 — lei sancionada e decreto previam empenho até março.</b> LOA 2026 (PLN 15/2025) sancionada em janeiro; Decreto nº 12.846/2026 previa liberação integral do RP 7 até março. O Decreto nº 12.990 (29/05/2026) manteve a suspensão — nenhuma NE de RP 7 em 2026.</li>
+    <li><b>3. Dotação legal existente e suficiente.</b> Lei suplementada: R$ 20.400.000 consignados para obras na emenda de bancada (15R3/RP 7) — mais que o saldo a empenhar do grupo (R$ 6,73 mi). Planejamento e licitações seguiram as leis orçamentárias sancionadas de 2025 e 2026.</li>
+    <li><b>4. Custo do bloqueio para a UFPB.</b> Os R$ 5,12 mi empenhados em 2026 saíram do discricionário próprio (RP 2), remanejado de custeio — agravado pelo cancelamento de ~R$ 14 milhões do discricionário em janeiro/2026, ainda pendente de recomposição pelo MEC.</li>
+  </ul>
+  <div class="foot"><span>Estudo Obras UFPB 2025-2026 · CODEOR/PROPLAN · posição 11/08/2026</span><span>7</span></div>
+</section>
+
+<!-- 8 GINASIO -->
+<section class="slide">
+  <p class="kick" style="color:var(--conv)">Obras convênio — fonte 1081</p><h1>Novo Ginásio Didático (CCS) · Construtora Soberana</h1>
+  <div class="k4">
+    <div class="kpi"><b>R$ 4.505.899,23</b><span>Contrato (PI PC2) · previsão 2026: 4.821.312,18</span></div>
+    <div class="kpi"><b style="color:var(--conv)">R$ 4.000.000,00</b><span>Convênio SEE-PB (23/03/2026) + contrapartida R$ 1.366.129,40</span></div>
+    <div class="kpi"><b style="color:var(--pac)">R$ 1.200.000,00</b><span>Recebido em 06/07/2026 (parcela mar/26, ~4 meses de atraso)</span></div>
+    <div class="kpi"><b style="color:var(--ufpb)">R$ 1.506.593,76</b><span>Empenhado: 506,5 mil (RP 7/2025, recursos UFPB) + 1,0 mi (1081/2026)</span></div>
+  </div>
+  <ul>
+    <li>Obra contava com empenho próprio da UFPB desde a contratação (NE 000474, R$ 506.548,70 — RP 7/2025).</li>
+    <li>Sem arrecadação, a parte do Estado não foi liberada em 26/06; com o financeiro de 06/07, empenhou-se R$ 1,0 mi (NE 000261).</li>
+    <li><b>Pendência — 3º atendimento SIOP: R$ 1.800.000</b> (R$ 200 mil liberáveis de imediato + R$ 1,6 mi condicionados à parcela de out/26).</li>
+    <li>Liquidado a pagar em 11/08: R$ 242.093,50 (NE 000474). Etapa de estruturas (R$ 1.896.656,20) vence em dez/26.</li>
+  </ul>
+  <div class="foot"><span>Estudo Obras UFPB 2025-2026 · CODEOR/PROPLAN · posição 11/08/2026</span><span>8</span></div>
+</section>
+
+<!-- 9 SIVUCA -->
+<section class="slide">
+  <p class="kick" style="color:var(--conv)">Obras convênio — fonte 1081</p><h1>Memorial Sivuca · MJM Engenharia · Convênio FDE 078/2025</h1>
+  <div class="k4">
+    <div class="kpi"><b>R$ 1.074.000,00</b><span>Contrato 017/2025-SOF (Concorrência 90004/2025)</span></div>
+    <div class="kpi"><b style="color:var(--conv)">R$ 549.722,41</b><span>Dotações 100% empenhadas (5 NEs, 3 créditos)</span></div>
+    <div class="kpi"><b style="color:var(--ufpb)">R$ 149.722,41</b><span>Recursos próprios da UFPB (NE 000473 de 30/12/25 + NEs 193/225 de 2026)</span></div>
+    <div class="kpi"><b style="color:var(--pac)">R$ 400.000,00</b><span>Recebido do FDE (13/03/26) — única parcela paga pelo Estado</span></div>
+  </div>
+  <ul>
+    <li>Obra <b>iniciada com recursos próprios</b> (R$ 20.000 em 30/12/2025) enquanto o repasse do Governo da PB atrasava.</li>
+    <li><b>Reconhecimento de dívida de R$ 101.007,08</b> (NE 000275): serviços executados de 23/04 a 25/06/2026, antes de existir a dotação do convênio — ponto de auditoria.</li>
+    <li><b>Pendência — 2º atendimento SIOP: R$ 600.000</b>, condicionado ao pagamento das parcelas vencidas (mar e jun/26) pelo Estado.</li>
+    <li>Liquidado: R$ 128.718,75 · pago: R$ 140.585,66 (incl. RAP). Vigência expira em 23/12/2026 — prorrogação ex officio cabível (Cláusula 4ª, I.2).</li>
+  </ul>
+  <div class="foot"><span>Estudo Obras UFPB 2025-2026 · CODEOR/PROPLAN · posição 11/08/2026</span><span>9</span></div>
+</section>
+
+<!-- 10 CICLO -->
+<section class="slide">
+  <p class="kick" style="color:var(--conv)">Obras convênio — fonte 1081</p><h1>O ciclo completo da receita (2025-2026)</h1>
+  <div class="steps">
+    <div class="step"><i>1</i><p>Reest. 2025.3 (29/09–03/10) — única janela cumprida, sem instrumento nem arrecadação: R$ 1.667.804. Dupla exceção: Ofício 746/2025/GR + concordância do IFPB (previsão não realizada do concurso).</p></div>
+    <div class="step"><i>5</i><p>26/06/2026 — Portaria SOF 266: orçamento liberado e Sivuca empenhado no mesmo dia (R$ 400 mil já arrecadados).</p></div>
+    <div class="step"><i>2</i><p>Crédito veio; receita não: Ginásio sem assinatura em 2025, Sivuca só em 23-24/12; Estado nada pagou — frustração integral.</p></div>
+    <div class="step"><i>6</i><p>Ginásio: liberação condicionada ao financeiro; com a GRU de R$ 1,2 mi (06/07), empenhado R$ 1,0 mi (NE 000261).</p></div>
+    <div class="step"><i>3</i><p>Fev/2026: MEC nega nova exceção (SIOP 636650 devolvido 2×) — consequência do precedente de dezembro.</p></div>
+    <div class="step"><i>7</i><p>Pendente 2º atendimento SIOP: R$ 600 mil do Sivuca — sem pagamento do Governo da PB.</p></div>
+    <div class="step"><i>4</i><p>Rito ordinário refeito: Reest. 2026.1 (06–10/04) + espera da posição de crédito SOF/MPO de 23/05.</p></div>
+    <div class="step"><i>8</i><p>Pendente 3º atendimento SIOP: R$ 1,8 mi do Ginásio — R$ 200 mil imediatos + R$ 1,6 mi na parcela de out/26.</p></div>
+  </div>
+  <div class="foot"><span>Estudo Obras UFPB 2025-2026 · CODEOR/PROPLAN · posição 11/08/2026</span><span>10</span></div>
+</section>
+
+<!-- 11 PANORAMA -->
+<section class="slide">
+  <p class="kick" style="color:var(--navy)">Panorama</p><h1>Emendas de bancada (RP 7) × Receita/SIOP</h1>
+  <div class="cols">
+    <div class="col"><h3 style="color:var(--red)">EMENDAS DE BANCADA (RP 7)</h3><ul style="margin:0;padding-left:2.4vh">
+      <li>2025: dotação ≈ R$ 18,55 mi → cancelamento de R$ 6.565.660 em 19/12 (SIOP 589674) → saldo R$ 11.984.340.</li>
+      <li>2026: R$ 15,2 mi na lei → suplementada para R$ 20.400.000 — 100% bloqueada (Dec. 12.846 e 12.990/2026).</li>
+      <li>Empenhos RP 7 do estudo: R$ 13.441.886,62 (8 NEs) — R$ 2,26 mi em 2023 (Bloco D, RAP) e o restante em 2025; nenhum em 2026.</li>
+      <li>Pleitos de desbloqueio/recomposição: SIOP 613909 e 613914.</li>
+      <li>Prazo crítico 2025: licitação/empenho até 02/12 — o corte de 19/12 caiu sobre o resíduo empenhável.</li>
+    </ul></div>
+    <div class="col"><h3 style="color:var(--conv)">RECEITA DOS CONVÊNIOS / SIOP</h3><ul style="margin:0;padding-left:2.4vh">
+      <li>Previsto na Reest. 2025.3: R$ 1.667.804 · arrecadado em 2025: R$ 0 (frustração integral).</li>
+      <li>266 dias e 6 devoluções no SIOP entre a reestimativa e a dotação da fonte 1081 (Portaria SOF 266, 26/06/2026).</li>
+      <li>Troca 1050→1081 de R$ 1,4 mi: recursos próprios como fluxo de caixa dos convênios.</li>
+      <li>Arrecadado 2026: R$ 1,6 mi de R$ 5,0 mi pactuados; R$ 600 mil vencidos sem pagamento.</li>
+      <li>Aprovação de 2025 só ocorreu por exceção: Ofício 746/2025/GR + concordância do IFPB.</li>
+    </ul></div>
+  </div>
+  <div class="foot"><span>Estudo Obras UFPB 2025-2026 · CODEOR/PROPLAN · posição 11/08/2026</span><span>11</span></div>
+</section>
+
+<!-- 12 LIQUIDADOS -->
+<section class="slide">
+  <p class="kick" style="color:var(--red)">Liquidados a pagar — AGO/2026</p><h1>Conta 449051 (Obras e Instalações) · exercício + RAP</h1>
+  <table style="font-size:1.65vh">
+    <tr><th>RP / origem</th><th>Obra</th><th>Nota de Empenho</th><th class="n">Liquidado a pagar</th></tr>
+    <tr><td>2 — Discricionário</td><td>Reforma SODS, Hall da Reitoria e Protocolo</td><td>2026NE000142 (EDA)</td><td class="n">3.901,18</td></tr>
+    <tr><td>2 — Discricionário</td><td>Calçadas de acesso e asfaltamento — Campus III</td><td>2026NE000144 (S&V)</td><td class="n">27.630,36</td></tr>
+    <tr class="tot"><td></td><td>Subtotal RP 2</td><td></td><td class="n">31.531,54</td></tr>
+    <tr><td>3 — PAC (TED-MEC)</td><td>Bloco de Pós-Graduação do CCHLA</td><td>2025NE000250</td><td class="n">156.849,49</td></tr>
+    <tr><td>3 — PAC (TED-MEC)</td><td>Laboratório IDEP</td><td>2025NE000252</td><td class="n">59.352,26</td></tr>
+    <tr class="tot"><td></td><td>Subtotal RP 3 — PAC</td><td></td><td class="n">216.201,75</td></tr>
+    <tr><td>7 — Em. bancada</td><td>Centro Profissional e Tecnológico</td><td>2025NE000352</td><td class="n">287.431,31</td></tr>
+    <tr><td>7 — Em. bancada</td><td>Bloco "D" do Centro de Educação</td><td>2023NE000381 (RAP)</td><td class="n">337.057,47</td></tr>
+    <tr><td>7 — Em. bancada</td><td>Lab. de Tipificação de Carcaças</td><td>2025NE000468</td><td class="n">95.500,48</td></tr>
+    <tr><td>7 — Em. bancada</td><td>Rotas Acessíveis</td><td>2025NE000371</td><td class="n">114.841,93</td></tr>
+    <tr><td>7 — Em. bancada</td><td>Novo Ginásio Didático (CCS)</td><td>2025NE000474</td><td class="n">242.093,50</td></tr>
+    <tr class="tot"><td></td><td>Subtotal RP 7</td><td></td><td class="n">1.076.924,69</td></tr>
+    <tr class="grand"><td></td><td>Total geral — AGO/2026</td><td></td><td class="n">1.324.657,98</td></tr>
+  </table>
+  <p class="obs">Leitura: 81,3% do estoque em RP 7 (dobrou de mai a ago); PAC voltou a acumular (R$ 216,2 mil desde jul); a NE 2023 do DIGICON (RP 8 — emenda de comissão, TED-MEC) teve pico de R$ 356,6 mil em fev-mar e foi paga até junho. Série mensal completa no painel HTML.</p>
+  <div class="foot"><span>Estudo Obras UFPB 2025-2026 · CODEOR/PROPLAN · posição 11/08/2026</span><span>12</span></div>
+</section>
+
+<!-- 13 PENDENCIAS -->
+<section class="slide pend">
+  <p class="kick" style="color:var(--navy)">Encaminhamentos</p><h1>Pendências e providências em curso</h1>
+  <div class="steps" style="grid-template-columns:1fr;gap:1.6vh">
+    <div class="step"><i style="background:var(--red)">1</i><p><b>Desbloqueio do RP 7/2026 (R$ 20,4 mi)</b> — pleitos SIOP 613909/613914; licitações concluídas prontas para empenho imediato.</p></div>
+    <div class="step"><i style="background:var(--pac)">2</i><p><b>Suplementação TED/PAC</b> — atendimento integral do TED/PAC atual e da complementação solicitada (Ofícios 845/856/2025 e 280/2026/GR).</p></div>
+    <div class="step"><i style="background:var(--conv)">3</i><p><b>2º atendimento SIOP — Sivuca (R$ 600 mil)</b> — condicionado ao pagamento das parcelas vencidas (mar e jun/26) pelo Governo da PB.</p></div>
+    <div class="step"><i style="background:var(--conv)">4</i><p><b>3º atendimento SIOP — Ginásio (R$ 1,8 mi)</b> — R$ 200 mil liberáveis de imediato; R$ 1,6 mi na parcela de out/26.</p></div>
+    <div class="step"><i style="background:var(--ufpb)">5</i><p><b>Recomposição do discricionário</b> — ≈ R$ 14 milhões cancelados em janeiro/2026, pendentes de recomposição pelo MEC.</p></div>
+    <div class="step"><i style="background:var(--conv)">6</i><p><b>Prorrogação ex officio do Convênio Sivuca</b> — antes de 23/12/2026 (Cláusula 4ª, I.2), pelos atrasos de liberação do FDE.</p></div>
+    <div class="step"><i style="background:var(--mec)">7</i><p><b>Conferências no SIAFI</b> — favorecidos PK1 × PC7 (contratos 010 e 011/2026) e contrato do CCHLA (dif. R$ 254.270,95).</p></div>
+  </div>
+  <div class="foot"><span>Estudo Obras UFPB 2025-2026 · CODEOR/PROPLAN · posição 11/08/2026</span><span>13</span></div>
+</section>
+
+<div id="nav">
+  <button id="prev">‹</button><span id="pg">1 / 13</span><button id="next">›</button>
+</div>
+<script>
+const S=[...document.querySelectorAll(".slide")]; let i=0;
+function go(n){ i=Math.max(0,Math.min(S.length-1,n)); S.forEach((s,j)=>s.classList.toggle("on",j===i)); document.getElementById("pg").textContent=(i+1)+" / "+S.length; }
+document.getElementById("prev").onclick=()=>go(i-1);
+document.getElementById("next").onclick=()=>go(i+1);
+document.addEventListener("keydown",e=>{ if(e.key==="ArrowRight"||e.key==="PageDown"||e.key===" ") go(i+1); if(e.key==="ArrowLeft"||e.key==="PageUp") go(i-1); if(e.key==="Home") go(0); if(e.key==="End") go(S.length-1); });
+document.addEventListener("click",e=>{ if(e.target.closest("#nav")) return; if(e.clientX>window.innerWidth*0.66) go(i+1); else if(e.clientX<window.innerWidth*0.2) go(i-1); });
+go(0);
+</script>
+</body>
+</html>
